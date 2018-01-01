@@ -1,0 +1,49 @@
+<div class="wto-container">
+	<div class="row" style="margin-bottom: 0;">
+		<div class="login-bg">
+			<div style="margin-top: 80px">
+				<div class="col s4 m4 hide-on-small-only">&nbsp;</div>
+				<div class="col s12 m4 topgap20">
+					<div class="login-title">SIGNUP</div>
+					<form name="signup">
+						<div class="input-field topgap40">
+							<input placeholder="Email" id="email" type="email" class="validate" style="margin-bottom: 0;" ng-model="registerObj.userEmail" required>
+							<label data-error="Please enter a valid email!" class="active" for="email" style="font-size: 10px;top:10px;">EMAIL</label>
+						</div>
+
+						<div class="input-field topgap40">
+							<input data-error="wrong" placeholder="Password" id="password" type="password" class="validate" style="margin-bottom: 0;" ng-model="registerObj.userPassword" required>
+							<label class="active font-10" style="font-size: 10px;top:10px;" for="password">PASSWORD</label>
+						</div>
+
+						<div class="input-field topgap40">
+							<input data-error="wrong" placeholder="Confirm Password" id="confirm_password" type="password" class="validate" style="margin-bottom: 0;" ng-model="registerObj.pass" ng-change="comparePass()" ng-pattern="registerObj.userPassword" ng-focus="passwordCheck()" required>
+							<label class="active font-10" style="font-size: 10px;top:10px;" for="confirm_password">CONFIRM PASSWORD</label>
+							<div class="font-10 topgap6" style="color: #ff6565">{{matchError}}</div>
+							<div class="font-10 topgap6" style="color: #ff6565">{{pwdErrMsg}}</div>
+						</div>
+
+						<div class="topgap15">
+							<a class="inline-block label-grey font-12">Already a member?</a>
+							<a ui-sref="login" class="inline-block label-blue font-weight-500 font-12 right">CLICK HERE TO LOGIN</a>
+						</div>
+
+						<div class="topgap40 text-center">
+							<div class="g-recaptcha" data-sitekey="6LdtRDgUAAAAALix9YJiyJKQOiGSWqzEqGD7rLoC"></div>
+						</div>
+
+						<div class="text-center font-10 topgap10" style="color: #9b9b9b;">
+							<span>By proceeding, you agree to our </span>
+							<a ui-sref="terms" style="text-decoration: underline;">Terms of Services & Privacy Policy</a>
+						</div>
+						
+						<div class="text-center topgap15 disable-class">
+							<button type="submit" value="Submit" class="btn-submit" ng-disabled="!signup.$valid || (pwdErrMsg != '')" ng-click="register()">SIGNUP</button>
+						</div>
+					</form>
+				</div>
+				<div class="col s4 m4 hide-on-small-only">&nbsp;</div>
+			</div>
+		</div>	
+	</div>
+</div>

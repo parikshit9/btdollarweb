@@ -1,0 +1,83 @@
+<div class="wto-container">
+	<div class="row" style="margin-bottom: 0;">
+		<nav scroll class="wto-fixed-nav {{boolChangeClass?'wto-white-nav':'wto-trans-nav'}}">
+			<div class="col s12">
+				<a href="#" data-activates="mobile-nav" class="button-collapse" style="color: #9b9b9b;margin: 0;"><i class="material-icons">menu</i></a>
+				<ul class="wto-nav-ul right hide-on-small-only">
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#about">ABOUT US</a>
+					</li>
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">HOME</a>
+					</li>
+
+					<li ng-if="state.current.name == 'vision'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#crew">CREW</a>
+					</li>
+					<li ng-if="state.current.name != 'vision'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="vision">CREW</a>
+					</li>
+
+					<li>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'vision' ? 'anchor-active':''}}" ui-sref="vision">VISION</a>
+					</li>
+
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#rewards">REWARDS</a>
+					</li>
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">REWARDS</a>
+					</li>
+
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#road-map">ROAD MAP</a>
+					</li>
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">ROAD MAP</a>
+					</li>
+
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#client">CLIENTELE</a>
+					</li>
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">CLIENTELE</a>
+					</li>
+
+					<li>
+						<a href="https://s3.ap-south-1.amazonaws.com/tourcoin/whitepaper.pdf" target="_blank" class="wto-anchor {{boolChangeClass?'':'border-none'}}">WHITEPAPER</a>
+					</li>
+
+					<li>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'faq' ? 'anchor-active':''}}" ui-sref="faq">FAQs</a>
+					</li>
+
+					<li ng-if="state.current.name == 'dashboard' || state.current.name == 'dashboard_1'"><a class="dropdown-button wto-anchor" style="border-bottom:none!important" href="#!" data-activates="dropdown1">MY ACCOUNT<i class="material-icons log-icon right">arrow_drop_down</i></a></li>
+				</ul>
+
+				<ul class="side-nav" id="mobile-nav">
+					<li ng-if="state.current.name == 'home'"><a href="#about">About Us</a></li>
+					<li ng-if="state.current.name == 'home'"><a href="#road-map">Road Map</a></li>
+					<li ng-if="state.current.name == 'vision'"><a href="#crew">Crew</a></li>
+					<li ng-if="state.current.name == 'home'"><a href="#rewards">Rewards</a></li>
+					<li ng-if="state.current.name == 'home'"><a href="#client">Clientele</a></li>
+
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">About Us</a></li>
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Road Map</a></li>
+					<li ng-if="state.current.name != 'vision'"><a ui-sref="Vision">Crew</a></li>
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Rewards</a></li>
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Clientele</a></li>
+
+					<li><a ui-sref="vision">Vision</a></li>
+					<li><a ui-sref="vision">Crew</a></li>
+					<li><a ui-sref="faq">FAQs</a></li>
+					<li><a href="https://s3.ap-south-1.amazonaws.com/tourcoin/whitepaper.pdf" target="_blank">WHITEPAPER</a></li>
+					<li ng-if="state.current.name == 'dashboard'"><a href="#!" ng-click="logout()">Logout</a></li>
+				</ul>
+
+				<ul id="dropdown1" class="dropdown-content">
+					<li><a style="font-size: 12px;color: #05e7e6;" href="#!" ng-click="logout()">LOGOUT</a></li>
+				</ul>
+			</div>
+		</nav>		
+	</div>
+</div>

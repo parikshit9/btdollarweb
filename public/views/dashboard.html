@@ -1,0 +1,201 @@
+<div class="wto-container" style="background-color: #f7f7fa;">
+	<div class="row" style="margin-top: 80px;">
+		<div class="col s2 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m10 topgap60" style="padding:0;">
+			<div class="half-padding">
+				<a class="font-14 label-grey" target="_blank" href="https://s3.ap-south-1.amazonaws.com/tourcoin/invest.pdf">PROCESS TO INVEST</a>
+			</div>
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="dash-block-1">
+						<div class="row" style="margin-bottom: 0;">
+							<div class="col s12 m6" style="padding: 0;">
+								<span class="inline-block label-light-grey font-14 rightgap20">Current Balance:</span>
+
+								<span class="inline-block font-36 label-grey font-weight-500">0.00 WTO</span>
+							</div>
+							<div class="col s12 m6" style="padding: 0;position: relative;">
+								<button class="btn-submit right" ng-if="!showLink" ng-click="refer()" style="margin-left: 0;transform: none;">INVITE A FRIEND</button>
+								<div ng-if="showLink" class="font-12 label-light-grey" style="padding:0 30px;margin-bottom: 6px;">Your referral link</div>
+								<input type="text" ng-readonly="true" class="wallet-input width-override right" ng-if="showLink" ng-model="userData.userReferralLink" id="referLink" style="padding: 0 15px!important;">
+								<span class="send-wallet-btn" ng-click="copyRefer()" ng-if="showLink" style="top: 32px;right: 8px;">COPY</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m12">
+					<div class="dash-block-1">
+						<div class="row">
+							<div class="col s12 m6">
+								<div class="label-grey font-24 text-center topgap40">
+									<span class="font-weight-500">Bitcoin</span>
+									<span> & </span>
+									<span class="font-weight-500">Ethereum</span>
+									<span> funding<br/>options will be available from<br/> 1. DEC. 2017</span>
+								</div>
+							</div>
+							<div class="col s12 m6">
+								<div class="wto-presell text-center" style="margin-top: 40px;">
+									<span class="font-weight-500" style="color:#4a4a4a;">PRESALE</span>
+									<span class="font-weight-300" style="color:#4a4a4a;"> STARTS</span>
+								</div>
+								<div class="topgap40">
+									<div class="text-center font-30">
+										<span class="inline-block wto-countdown" id="countdash-dy" style="color:#4a4a4a;"></span>
+										<span class="inline-block wto-countdown" style="color:#4a4a4a;"> : </span>
+										<span class="inline-block wto-countdown" id="countdash-hr" style="color:#4a4a4a;"></span>
+										<span class="inline-block wto-countdown" style="color:#4a4a4a;"> : </span>
+										<span class="inline-block wto-countdown" id="countdash-mn" style="color:#4a4a4a;"></span>
+										<span class="inline-block wto-countdown" style="color:#4a4a4a;"> : </span>
+										<span class="inline-block wto-countdown" id="countdash-sc" style="color:#4a4a4a;"></span>
+									</div>
+									<div class="text-center topgap6">
+										<span class="inline-block wto-dhms">
+											DAYS
+										</span>
+										<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
+										<span class="inline-block wto-dhms">
+											HOURS
+										</span>
+										<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
+										<span class="inline-block wto-dhms">
+											MINUTES
+										</span>
+										<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
+										<span class="inline-block wto-dhms">
+											SECONDS
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m6" style="padding-right: 5px;">
+					<div class="dash-block-2 topgap10" style="display: none;">
+						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
+							Bitcoin Funding
+						</div>
+						<div class="text-center" style="padding: 20px;">
+							<div class="dash-click-generate">
+								Click to Generate<br/>Bitcoin Address
+							</div>
+							<div class="join-ico topgap40 cursor" style="width: 240px;padding: 13px 0;margin-left: 0;">
+								<span class="inline-block leftgap20 middle">INVEST WITH BTC</span>
+								<span class="ico-arrow" style="padding: 4px 15px;">
+									<img class="middle" src="/img/bitcoin.svg" width="15">
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="dash-block-2 topgap10 relative" ng-if="!editBtcMode">
+						<input type="text" name="wallet" class="wallet-input" ng-model="dashData.userWallet.bitcoin.walletId"  ng-disabled="btcFlag">
+						<span class="send-wallet-btn" ng-click="addWalletId('BITCOIN',dashData.userWallet.bitcoin.walletId)" ng-if="!btcFlag">SAVE</span>
+						<span class="send-wallet-btn" ng-click="showEdit('BTC')" ng-if="btcFlag">EDIT</span>
+
+						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
+					</div>
+
+					<div class="dash-block-2 topgap10 relative" ng-if="editBtcMode">
+						<input type="text" name="wallet" class="wallet-input" ng-model="edit.btcWallet">
+						<span class="send-wallet-btn"  ng-click="editWalletId('BITCOIN',edit.btcWallet)">UPDATE</span>
+
+						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
+					</div>
+				</div>
+
+				<div class="col s12 m6" style="padding-left: 5px;">
+					<div class="dash-block-2 topgap10" style="display: none;">
+						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
+							Ethereum Funding
+						</div>
+						<div class="text-center" style="padding: 20px;">
+							<div class="dash-click-generate">
+								Click to Generate<br/>Etherium Address
+							</div>
+							<div class="join-ico topgap40 cursor" style="width: 240px;padding: 13px 0;margin-left: 0;">
+								<span class="inline-block leftgap20 middle">INVEST WITH ETH</span>
+								<span class="ico-arrow" style="padding: 4px 15px;">
+									<img class="middle" src="/img/ethereum.svg" width="15">
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="dash-block-2 topgap10 relative" ng-if="!editEthMode">
+						<input type="text" name="wallet" class="wallet-input" ng-model="dashData.userWallet.eherium.walletId" ng-disabled="ethFlag">
+						<span class="send-wallet-btn" ng-click="addWalletId('ETH',dashData.userWallet.eherium.walletId)" ng-if="!ethFlag">SAVE</span>
+						<span class="send-wallet-btn" ng-click="showEdit('ETH')" ng-if="ethFlag">EDIT</span>
+
+						<div class="font-12 label-grey text-center">Please input the ETHEREUM wallet address from<br/>where you will send your Ether.</div>
+					</div>
+
+					<div class="dash-block-2 topgap10 relative" ng-if="editEthMode">
+						<input type="text" name="wallet" class="wallet-input" ng-model="edit.ethWallet">
+						<span class="send-wallet-btn" ng-click="editWalletId('ETH',edit.ethWallet)">UPDATE</span>
+
+						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
+					</div>
+				</div>
+
+				<div class="col s12 m12">
+					<div class="dash-block-2 topgap10">
+						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
+							Current Bonus 25%
+						</div>
+						<div class="text-center" style="padding: 20px;">
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">25%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">PRESALE</div>
+							</div>
+
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">15%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 1</div>
+							</div>
+
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">15%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 2</div>
+							</div>
+
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">10%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 3</div>
+							</div>
+
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">5%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 4</div>
+							</div>
+						</div>
+						<div class="text-center topgap25 font-14 label-light-grey" style="letter-spacing: -0.2px">
+							* Investors with highest number of referrals will be awarded tour package of their respective choice (T&C apply).
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m12 hide-on-small-only" style="display: none;">
+					<div class="dash-block-2 topgap10" style="padding: 0;">
+						<div class="row" style="border-bottom: 1px solid #eaeaea;padding: 20px;margin:0">
+							<div class="col s2 m2 font-15 font-weight-500 label-grey">Date</div>
+							<div class="col s6 m6 font-15 font-weight-500 label-grey">Description</div>
+							<div class="col s2 m2 font-15 font-weight-500 label-grey">Status</div>
+							<div class="col s2 m2 font-15 font-weight-500 label-grey">Amount</div>
+						</div>
+						<div class="row" style="padding: 20px;">
+							<div class="col s2 m2 font-14 label-grey">10 Jun 2017</div>
+							<div class="col s6 m6 font-14 label-grey">Received 20 ETH</div>
+							<div class="col s2 m2 font-14 label-grey">Unconfirmed</div>
+							<div class="col s2 m2 font-14 label-grey">20 ETH</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col s2 m1 hide-on-small-only">&nbsp;</div>
+	</div>
+</div>

@@ -1,0 +1,214 @@
+<div class="wto-container" style="background-color: #f7f7fa;">
+	<div class="row" style="margin-top: 80px;">
+		<div class="col s2 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m10 topgap60" style="padding:0;">
+			<div class="row half-padding" style="margin: 0;">
+				<div class="col s12 m6">
+					<span class="dash-tab {{tab == 'dash' ? 'dash-tab-active':''}}" ng-click="tabChanger('dash')">DASHBOARD</span>
+					<span class="dash-tab {{tab == 'refer' ? 'dash-tab-active':''}}" ng-click="tabChanger('refer')">MY REFERRALS</span>
+				</div>
+				<div class="col s12 m6 text-right hide-on-small-only">
+					<a class="font-14 label-grey" target="_blank" href="https://s3.ap-south-1.amazonaws.com/tourcoin/invest.pdf">PROCESS TO INVEST</a>
+				</div>
+			</div>
+			<div class="row" ng-if="tab == 'refer'">
+				<div class="col s12 m12">
+					<div class="dash-block-1" style="padding:0;">
+						<div class="row" style="margin-bottom: 0;">
+							<div class="col s12 m6" style="padding: 16px 35px;">
+								<div class="font-14 label-grey">
+									MY REFERRALS
+								</div>
+							</div>
+							<div class="col s12 m6 text-right" style="padding: 0;">
+								<span class="inline-block cursor" ng-click="tabChanger('dash')" style="background-color: #05e7e6;padding: 16px 35px">
+									<img src="/img/arrow.svg" width="17" style="transform: rotateY(180deg);">
+									<span class="inline-block font-14 font-weight-500 font-white leftgap6">GO BACK</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="dash-block-1 topgap10" style="padding: 25px 35px;" ng-if="dashData.referralEmails != null">
+						<div class="row" style="margin-bottom: 0;">
+							<div class="col s12">
+								<div class="font-14 label-light-grey" style="line-height: 2;" ng-repeat="data in dashData.referralEmails">
+									{{data.referralEmail}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" ng-if="tab == 'dash'">
+				<div class="col s12 m12">
+					<div class="dash-block-1">
+						<div class="row" style="margin-bottom: 0;">
+							<div class="col s12 m6" style="padding: 0;">
+								<span class="inline-block label-light-grey font-14 rightgap20">Current Balance:</span>
+
+								<span class="inline-block font-36 label-grey font-weight-500">{{dashData.userWTO}} WTC</span>
+
+								<!-- <span class="inline-block label-light-grey font-14 leftgap20">Current Price = $ 1.25</span> -->
+							</div>
+							<div class="col s12 m6" style="padding: 0;position: relative;">
+								<button class="btn-submit right" ng-if="!showLink" ng-click="refer()" style="margin-left: 0;transform: none;width:240px;height: 45px;">INVITE A FRIEND</button>
+								<div ng-if="showLink" class="font-12 label-light-grey" style="padding:0 30px;margin-bottom: 6px;">Your referral link</div>
+								<input type="text" ng-readonly="true" class="wallet-input width-override right" ng-if="showLink" ng-model="userData.userReferralLink" id="referLink" style="padding: 0 15px!important;">
+								<span class="send-wallet-btn" ng-click="copyRefer()" ng-if="showLink" style="top: 32px;right: 8px;">COPY</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m6" style="padding-right: 5px;">
+					<div class="dash-block-2 topgap10"  ng-if="!btcFlag" style="min-height: 332px;">
+						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
+							Bitcoin Funding
+						</div>
+						<div class="text-center" style="padding: 20px;">
+							<div class="dash-click-generate">
+								Click to Generate<br/>Bitcoin Address
+							</div>
+							<div class="join-ico topgap40 cursor" ng-click="addCheck()" style="width: 240px;padding: 13px 0;margin-left: 0;">
+								<span class="inline-block leftgap20 middle">INVEST WITH BTC</span>
+								<span class="ico-arrow" style="padding: 4px 15px;">
+									<img class="middle" src="/img/bitcoin.svg" width="15">
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="dash-block-2 topgap10" ng-if="btcFlag" style="min-height: 332px;">
+						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
+							Bitcoin Funding
+						</div>
+						<div class="text-center" style="padding:20px;">
+							<img ng-src="{{dashData.companyWallet.bitcoin.bar}}" width="150">
+						</div>
+						<div class="relative">
+							<input type="text" name="wallet" class="wallet-input" ng-model="dashData.companyWallet.bitcoin.walletId" ng-readonly="true" id="btcId">
+							<span class="send-wallet-btn" ng-click="copyBtc()" style="top:8px;right: 4%;">COPY</span>
+						</div>
+					</div>
+
+					<div class="dash-block-2 topgap10 relative" ng-if="!editBtcMode">
+						<input type="text" name="wallet" class="wallet-input" ng-model="dashData.userWallet.bitcoin.walletId"  ng-disabled="btcFlag">
+						<span class="send-wallet-btn" ng-click="addWalletId('BITCOIN',dashData.userWallet.bitcoin.walletId)" ng-if="!btcFlag">SAVE</span>
+						<span class="send-wallet-btn" ng-click="showEdit('BTC')" ng-if="btcFlag">EDIT</span>
+
+						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
+					</div>
+
+					<div class="dash-block-2 topgap10 relative" ng-if="editBtcMode">
+						<input type="text" name="wallet" class="wallet-input" ng-model="edit.btcWallet" autofocus>
+						<span class="send-wallet-btn"  ng-click="editWalletId('BITCOIN',edit.btcWallet)">UPDATE</span>
+
+						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
+					</div>
+				</div>
+
+				<div class="col s12 m6" style="padding-left: 5px;">
+					<div class="dash-block-2 topgap10" ng-if="!ethFlag" style="min-height: 332px;">
+						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
+							Ethereum Funding
+						</div>
+						<div class="text-center" style="padding: 20px;">
+							<div class="dash-click-generate">
+								Click to Generate<br/>Etherium Address
+							</div>
+							<div class="join-ico topgap40 cursor" ng-click="addCheck()" style="width: 240px;padding: 13px 0;margin-left: 0;">
+								<span class="inline-block leftgap20 middle">INVEST WITH ETH</span>
+								<span class="ico-arrow" style="padding: 4px 15px;">
+									<img class="middle" src="/img/ethereum.svg" width="15">
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="dash-block-2 topgap10" ng-if="ethFlag" style="min-height: 332px;">
+						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
+							Ethereum Funding
+						</div>
+						<div class="text-center" style="padding:30px 20px;">
+							<img ng-src="{{dashData.companyWallet.etherium.bar}}" width="130">
+						</div>
+						<div class="relative">
+							<input type="text" name="wallet" class="wallet-input" ng-model="dashData.companyWallet.etherium.walletId" ng-readonly="true" id="ethId">
+							<span class="send-wallet-btn" ng-click="copyEth()" style="top:8px;right: 4%;">COPY</span>
+						</div>
+					</div>
+
+					<div class="dash-block-2 topgap10 relative" ng-if="!editEthMode">
+						<input type="text" name="wallet" class="wallet-input" ng-model="dashData.userWallet.eherium.walletId" ng-disabled="ethFlag">
+						<span class="send-wallet-btn" ng-click="addWalletId('ETH',dashData.userWallet.eherium.walletId)" ng-if="!ethFlag">SAVE</span>
+						<span class="send-wallet-btn" ng-click="showEdit('ETH')" ng-if="ethFlag">EDIT</span>
+
+						<div class="font-12 label-grey text-center">Please input the ETHEREUM wallet address from<br/>where you will send your Ether.</div>
+					</div>
+
+					<div class="dash-block-2 topgap10 relative" ng-if="editEthMode">
+						<input type="text" name="wallet" class="wallet-input" ng-model="edit.ethWallet" autofocus>
+						<span class="send-wallet-btn" ng-click="editWalletId('ETH',edit.ethWallet)">UPDATE</span>
+
+						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
+					</div>
+				</div>
+
+				<div class="col s12 m12">
+					<div class="dash-block-2 topgap10">
+						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
+							Current Bonus 25% (1 TOURCOIN = $1.75)
+						</div>
+						<div class="text-center" style="padding: 20px;">
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">25%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">PRESALE</div>
+							</div>
+
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">15%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 1</div>
+							</div>
+
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">15%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 2</div>
+							</div>
+
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">10%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 3</div>
+							</div>
+
+							<div class="dash-percent-blocks">
+								<div class="dash-percent">5%</div>
+								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 4</div>
+							</div>
+						</div>
+						<div class="text-center topgap25 font-14 label-light-grey" style="letter-spacing: -0.2px">
+							* Investors with highest number of referrals will be awarded tour package of their respective choice (T&C apply).
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m12 hide-on-small-only" ng-if="transactionDetails.length>0">
+					<div class="dash-block-2 topgap10" style="padding: 0;">
+						<div class="row" style="border-bottom: 1px solid #eaeaea;padding: 20px;margin:0">
+							<div class="col s2 m2 font-15 font-weight-500 label-grey">Date</div>
+							<div class="col s6 m6 font-15 font-weight-500 label-grey">Description</div>
+							<div class="col s2 m2 font-15 font-weight-500 label-grey">Status</div>
+							<div class="col s2 m2 font-15 font-weight-500 label-grey">Amount</div>
+						</div>
+						<div class="row" style="padding: 20px;" ng-repeat="data in transactionDetails">
+							<div class="col s2 m2 font-14 label-grey">{{data.transactionTime}}</div>
+							<div class="col s6 m6 font-14 label-grey">Received {{data.currencyTransferredToCompany}} {{data.ethereumWalletId == '' ? 'BTC' : 'ETH'}} From {{data.bitcoinWalletId}}{{data.ethereumWalletId}}</div>
+							<div class="col s2 m2 font-14 label-grey">{{data.status == 1 ? 'Confirmed' : 'Unconfirmed'}}</div>
+							<div class="col s2 m2 font-14 label-grey">{{data.currencyTransferredToCompany}} {{data.ethereumWalletId == '' ? 'BTC' : 'ETH'}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col s2 m1 hide-on-small-only">&nbsp;</div>
+	</div>
+</div>

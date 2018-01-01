@@ -1,0 +1,32 @@
+<div class="wto-container">
+	<div class="row" style="margin-bottom: 0;">
+		<div class="login-bg">
+			<div style="margin-top: 80px">
+				<div class="col s4 m4 hide-on-small-only">&nbsp;</div>
+				<div class="col s12 m4 topgap40">
+					<div class="login-title">SIGN IN</div>
+					<div class="input-field topgap40">
+						<input placeholder="Email" id="email" type="email" class="validate" style="margin-bottom: 0;" ng-model="loginObj.userEmail">
+						<label data-error="Invalid Email" class="active" for="email" style="font-size: 10px;top:10px;">EMAIL</label>
+					</div>
+					<div class="input-field topgap40">
+						<input placeholder="Password" id="password" type="password" class="validate" style="margin-bottom: 0;" ng-model="loginObj.userPassword">
+						<label class="active font-10" style="font-size: 10px;top:10px;" for="password">PASSWORD</label>
+					</div>
+					<div class="topgap15">
+						<a ui-sref="forgotPassword" class="inline-block label-grey font-12">FORGOT PASSWORD</a>
+						<a ui-sref="signup" class="inline-block label-grey font-12 right">SIGNUP</a>
+					</div>
+					<div class="font-10 topgap6 text-center" style="color: #ff6565">{{loginError}}</div>
+					<div class="topgap50">
+						<div class="g-recaptcha" data-sitekey="6LdtRDgUAAAAALix9YJiyJKQOiGSWqzEqGD7rLoC"></div>
+					</div>
+					<div class="text-center topgap30">
+						<span class="btn-submit" ng-click="login()">LOGIN</span>
+					</div>
+				</div>
+				<div class="col s4 m4 hide-on-small-only">&nbsp;</div>
+			</div>
+		</div>	
+	</div>
+</div>
