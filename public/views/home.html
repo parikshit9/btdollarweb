@@ -1,171 +1,720 @@
 <div class="wto-container">
-	<div class="hide-on-small-only" style="width: 500px;height: auto;position: fixed;bottom: 0;right: 0;z-index: 998;cursor: pointer;" ng-click="state.go('signup')" ng-if="showAd">
+	<!-- <div class="hide-on-small-only" style="width: 500px;height: auto;position: fixed;bottom: 0;right: 0;z-index: 998;cursor: pointer;" ng-click="state.go('signup')" ng-if="showAd">
 		<div style="position: relative;">
 			<img src="/img/ad.png" style="width: 100%;height:auto;">
 			<span style="width: 40px;height: 40px;background-color: #f5f5f5;position: absolute;top: 0;right: 0;z-index: 999;display: flex;justify-content: center;align-items: center;" ng-click="closeAd()">
 				<img src="/img/close.svg" style="width: 15px;">
 			</span>
 		</div>
-	</div>
+	</div> -->
 	<div class="row">
-		<div class="background-xs show-on-small"></div>
-		<video class="hide-on-small-only" poster="/img/ny.jpg" id="bgvid" playsinline autoplay muted loop>
-			<source src="/img/ny.webm" type="video/webm">
-			<!-- <source src="ny.mp4" type="video/mp4"> -->
-		</video>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m7 wto-home-bg relative">
-			<img src="/img/home-semi.png" class="hide-on-small-only" style="position: absolute;top: 0;left:-14%;">
+		<div class="col s12 m12 wto-home-bg relative">
 			<div class="text-center block-1-margin">
-				<span class="wto-home-span">WORLD</span>
-				<img class="logo" src="/img/tourcoin.png">
-				<span class="wto-home-span">TOURISM</span>
+				<span class="wto-home-span">BITCOIN</span>
+				<img class="logo" src="/img/btg.svg">
+				<span class="wto-home-span">DOLLAR</span>
 			</div>
-			<div class="text-center wto-journey-text topgap20">- LET THE JOURNEY BEGIN -</div>
-			<div class="text-center relative topgap15">
-				<!-- <img src="/img/frame.png" class="wto-frame"> -->
+			<div class="text-center relative topgap30">
 				<span class="wto-frame-text">
-					<div>World's first decentralized currency dedicated</div>
-					<div>
-						<span>to </span>
-						<span class="font-weight-500">$25 trillion</span>
-						<span> tourism market.</span>
-						<!-- <span class="font-weight-400">ERC 20</span>
-						<span> smart contract.</span> -->
-					</div>
+					<div>First Artificial Intelligence Bitcoin</div>
+					<div>of the people, for the people and by the people.</div>
 				</span>
 			</div>
-
-			<span class="wto-pricing hide-on-small-only">
-				<!-- <span class="inline-block text-center" style="vertical-align: bottom;">
-					<span class="inline-block font-weight-500 font-12 label-white text-center" style="width:90px;vertical-align: sub;">1 TOURCOIN = </span><br/>
-					<span class="inline-block font-12 text-center" style="">&nbsp;</span>
-				</span>
-
-				<span class="inline-block text-center" style="margin: 0 6px;">
-					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 1.25</span><br/>
-					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">PRESALE</span>
-				</span>
-
-				<span class="inline-block text-center" style="margin: 0 6px;">
-					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 1.50</span><br/>
-					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 1</span>
-				</span>
-
-				<span class="inline-block text-center" style="margin: 0 6px;">
-					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 1.75</span><br/>
-					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 2</span>
-				</span>
-
-				<span class="inline-block text-center" style="margin: 0 6px;">
-					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 2.00</span><br/>
-					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 3</span>
-				</span>
-
-				<span class="inline-block text-center" style="margin: 0 6px;">
-					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 2.50</span><br/>
-					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 4</span>
-				</span> -->
-
-				<span class="inline-block text-left" style="margin: 0 12px;">
-					<span class="number-million">100</span>
-					<span class="inline-block" style="margin-left: 10px;">
-						<span class="million-text">MILLION</span><br/>
-						<span class="million-text">TRAVELLERS</span>
-					</span>
-				</span>
-
-				<span class="inline-block text-left" style="margin: 0 12px;">
-					<span class="number-million">560</span>
-					<span class="inline-block" style="margin-left: 10px;">
-						<span class="million-text">TOURISM</span><br/>
-						<span class="million-text">CLIENTS</span>
-					</span>
-				</span>
-
-				<span class="inline-block text-left" style="margin: 0 12px;">
-					<span class="number-million">120</span>
-					<span class="inline-block" style="margin-left: 10px;">
-						<span class="million-text">COUNTRIES</span><br/>
-						<span class="million-text">REACH</span>
-					</span>
-				</span>
-			</span>
-		</div>
-		<div class="col s12 m3 presale-started" ng-if="showStarted">
-			<div class="wto-presell" style="padding-left: 20px;">
-				<!-- <span class="font-weight-500" style="color: #05e7e6">PRESALE</span>
-				<span class="font-weight-300"> STARTED</span> -->
-				<span class="font-weight-500" style="color: #05e7e6">&nbsp;</span>
-				<span class="font-weight-300"> &nbsp;</span>
+			<div class="text-center topgap50">
+				<span class="btd-join-btn inline-block">JOIN US NOW</span>
 			</div>
-			<div class="topgap12" style="padding-left: 20px;">
-				<div class="font-weight-500 font-36 topgap12 cursor big-sub-label" style="letter-spacing: 0.2px;" ng-click="state.go('signup')">JOIN THE ICO</div>
-				<div class="topgap6 font-16 font-weight-500 cursor" ng-click="state.go('login')" style="color: #05e7e6">EXISTING USER LOGIN</div>
+			<div class="bottom-prices">
+				<span class="inline-block price-section">BTC/ USD- $16510</span>
+				<span class="inline-block price-section">BCH/ USD- $1340</span>
+				<span class="inline-block price-section">BCC/ USD- $350</span>
+				<span class="inline-block price-section">BTG/ USD- $260</span>
+				<span class="inline-block price-section">BCD/ USD- $40</span>
 			</div>
 		</div>
-		<div class="col s12 m3" ng-if="!showStarted">
-			<div class="wto-presell text-center">
-				<span class="font-weight-500">PRESALE</span>
-				<span class="font-weight-300"> STARTS</span>
-			</div>
-			<div class="topgap40">
-				<div class="text-center font-30">
-					<span class="inline-block wto-countdown" id="countdown-dy"></span>
-					<span class="inline-block wto-countdown"> : </span>
-					<span class="inline-block wto-countdown" id="countdown-hr"></span>
-					<span class="inline-block wto-countdown"> : </span>
-					<span class="inline-block wto-countdown" id="countdown-mn"></span>
-					<span class="inline-block wto-countdown"> : </span>
-					<span class="inline-block wto-countdown" id="countdown-sc"></span>
-				</div>
-				<div class="text-center topgap6">
-					<span class="inline-block wto-dhms">
-						DAYS
-					</span>
-					<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
-					<span class="inline-block wto-dhms">
-						HOURS
-					</span>
-					<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
-					<span class="inline-block wto-dhms">
-						MINUTES
-					</span>
-					<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
-					<span class="inline-block wto-dhms">
-						SECONDS
-					</span>
-				</div>
-				<div class="text-center topgap60 hide-on-small-only">
-					<span class="inline-block relative">
-						<input type="email" id="sub" ng-model="mailId" ng-change="validateEmail(mailId)" placeholder="Enter Email Address" class="main-home-mail">
-						<img src="/img/email.svg" class="mail-icon" style="left:0;">
-						<!-- <span class="mail-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span> -->
-						<!-- <label data-error="Invalid Email" class="active font-10" style="font-size: 10px;top:10px;" for="sub"></label> -->
-						<div class="font-10" style="color: red;margin-top: 4px;">{{errmsg}}</div>
-					</span>
-				</div>
-				<div class="text-right font-weight-500 font-45 topgap12 cursor big-sub-label hide-on-small-only" style="letter-spacing: 0.2px;" ng-click="subscribeMail(mailId)">SUBSCRIBE</div>
-			</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
 
 	<div class="row wto-white-bg">
 		<div class="col s1">&nbsp;</div>
 		<div class="col s10 topgap40 section scrollspy wow fadeIn" id="about">
-			<h5 class="text-center font-27" style="margin-top: 20px;">
-				<span class="font-weight-600">About</span>
-				<span class="font-weight-100"> US</span>
+			<h5 class="text-center btd-title" style="margin-top: 20px;">
+				<div>Artificial intelligence Bitcoin</div>
+				<div>of the people, for the people and by the people.</div>
 			</h5>
-			<div class="font-14 text-center topgap20 bottomgap40" style="color: #7f848b">
-				World Tourism is a one-of-its-kind tourism community comprising a diverse group of adroit individuals with varied skill sets including digital mining, tourism, legal and decentralized pundits, who have come together to realize a vision shared by 30 members of the World Tourism Crew and 350 tour agencies worldwide. All passionately devoted to collaboration and development of the tourism and cryptocurrency ecosystem and community. We believe that there must be an end to major tour agencies’ monopoly on tourism sector, and a fundamental restructuring of our tourism community and ecosystem to ensure that the discrepancies faced by tourists in travel costs across different countries can be addressed thoroughly.
+			<div class="font-16 font-weight-300 text-center topgap30 bottomgap40" style="color: #233d4e;line-height: 1.75;letter-spacing: 0.5px;">
+				<div>
+					Bitcoin Dollar is bringing the quickest and secure, easily accessible and reliable and not to mention, private and encrypted, digital money.
+				</div>
+				<div>All Bitcoin holders as of Feb, 05 2018 will be owners of Bitcoin Dollars.</div>
+				<div>All are welcome to join the Bitcoin Dollar community as we will be moving forward in creating sound money accessible to the whole world.</div>
+				<div>Those existing, unclaimed, unusable and lost bitcoin holders will be given 45 days to claim their respective Bitcoin Dollars.</div>
+				<div>With built-in smart contract, digital assets can be issued & distributed, Applications can be built on blockchain, making BTD a valuable & functional token.</div>
+				<div>If not claimed within specified durations, Bitcoin Dollar (BTD) will be distributed among the early backers, donors or contributors to the project.</div>
+				<div>As Bitcoin Dollar is a community-driven project, no one will stack claim for the unclaimed BTDs.</div>
+				<div>It will be distributed among the community according to their contributions. As the bitcoin holder have to claim their BTD individually, no exchange have any rights to deny Bitcoin Dollar to the user at the time blockchain Split.</div>
 			</div>
 		</div>
 		<div class="col s1">&nbsp;</div>
 	</div>
 
-	<div class="row">
+	<div class="row wto-white-bg">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section scrollspy bottomgap20 wow fadeIn" id="about">
+			<h5 class="text-center btd-title" style="margin-top: 20px;">
+				<div>FEATURES</div>
+			</h5>
+			<div class="row topgap40 bottomgap20">
+				<div class="col s12 m5">
+					<img src="/img/1.jpg" style="width: 95%;height:auto;">
+				</div>
+				<div class="col s12 m7">
+					<div class="feature-title">AI (Artificial Intelligence)</div>
+					<div class="font-15 topgap20 text-justify" style="color: #233d4e;line-height: 1.75;letter-spacing: 0.5px;">AI (Artificial Intelligence), Robotics, IoT (Internet of Things) and many such new technologies are altering the very contours of industries across sectors. With data as the new king, user behavior is changing. Companies will need a platform which will help them to merge blockchain with AI, IoT, Cloud, Big Data etc. It is essential that we invest in learning new technologies outside our domain and gain functional knowledge in emerging industries.</div>	
+				</div>
+			</div>
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row wto-white-bg" style="background-color: #fafafa;">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section scrollspy bottomgap20 wow fadeIn" id="about">
+			<div class="row topgap50 bottomgap20">
+				<div class="col s12 m7">
+					<div class="feature-title">Equitable Distribution</div>
+					<div class="font-15 topgap20 text-justify" style="color: #233d4e;line-height: 1.75;letter-spacing: 0.5px;">Bitcoin’s blockchain equitable will distributes Bitcoin Dollar all over the world who have interest in cryptocurrencies. Currently, there are 270 million BTC accounts in 8000 different exchanges worldwide from 2009 onwards. The BTC in those accounts is so minuscule it average 0.006670 BTC and many users not claimed their BTC. Apart from this 28% to 45% bitcoin are unused or lost in time. As per the recent exchanges data and surveys, there are 28 to 45% unusable or lost BTC, therefore 28 to 45 % unclaimed BTDs will be distributed to those early birds or contributors. About 60% exchanges have not shared Bitcoin cash, Bitcoin gold, and Bitcoin diamond to their users.</div>	
+				</div>
+				<div class="col s12 m5 text-right">
+					<img src="/img/2.jpg" style="width: 95%;height:auto;">
+				</div>
+			</div>
+			
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row wto-white-bg">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section scrollspy bottomgap20 wow fadeIn" id="about">
+			<div class="row topgap50 bottomgap20">
+				<div class="col s12 m5">
+					<img src="/img/3.jpg" style="width: 95%;height:auto;">
+				</div>
+				<div class="col s12 m7">
+					<div class="feature-title">Community Chain</div>
+					<div class="font-15 topgap20 text-justify" style="color: #233d4e;line-height: 1.75;letter-spacing: 0.5px;">With POW and PoS consensus mechanism, voting and bookkeeping rights can be separated, which prevents abuse or control of the system by any party. Users can maintain the policy discourse as long as they possess coins, thus achieve the true autonomy.To create a sustainable environment within Bitcoin dollar community, we have formulated BTD chain to contribute, refer, promote, develop and share. This will help us to distribute unclaimed BTDs among our community and gain trust to reach our objectives.</div>	
+				</div>
+			</div>
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row wto-white-bg">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section scrollspy bottomgap20 wow fadeIn" id="about">
+			<div class="flex topgap40">
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/roi-copy.svg"></div>
+					<div class="feature-sm-title">Equitable<br/>Distribution</div>
+				</div>
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/dependables-copy.svg"></div>
+					<div class="feature-sm-title">AI<br/>(Artificial Intelligence)</div>
+				</div>
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/decentralization-copy.svg"></div>
+					<div class="feature-sm-title">Decentralized</div>
+				</div>
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/graph.svg"></div>
+					<div class="feature-sm-title">Best ROI</div>
+				</div>
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/earth-copy.svg"></div>
+					<div class="feature-sm-title">Global Acceptance</div>
+				</div>
+			</div>
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row wto-white-bg">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section scrollspy bottomgap20 wow fadeIn" id="about">
+			<div class="flex topgap40">
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/secure-copy.svg"></div>
+					<div class="feature-sm-title">Secure</div>
+				</div>
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/private-copy.svg"></div>
+					<div class="feature-sm-title">Private</div>
+				</div>
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/rocket.png"></div>
+					<div class="feature-sm-title">Speed</div>
+				</div>
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/peer-to-peer.svg"></div>
+					<div class="feature-sm-title">D App</div>
+				</div>
+				<div class="text-center" style="width: 30%;">
+					<div style="min-height: 100px;"><img src="/img/anonymous-copy.svg"></div>
+					<div class="feature-sm-title">Anonymity</div>
+				</div>
+			</div>
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row" style="margin: 0;padding: 8px 0;">
+		<div class="col s12 topgap40">
+			<div class="row" style="margin: 0">
+				<div class="col s2"></div>
+				<div class="col s10 flex">
+					<div class="table-title" style="width: 30%;">
+						<div>Bitcoin</div>
+						<div class="font-weight-100">(BTC)</div>
+					</div>
+					<div class="table-title" style="width: 30%;">
+						<div>Segwit 2X</div>
+						<div class="font-weight-100">(B2X)</div>
+					</div>
+					<div class="table-title" style="width: 30%;">
+						<div>Bitcoin Gold</div>
+						<div class="font-weight-100">(BTG)</div>
+					</div>
+					<div class="table-title" style="width: 30%;">
+						<div>Bitcoin Cash</div>
+						<div class="font-weight-100">(BCH)</div>
+					</div>
+					<div class="table-title" style="width: 30%;color: #ef6c00;">
+						<div>Bitcoin Dollar</div>
+						<div class="font-weight-100">(BTD)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: #e8e9ed;margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					MAX SUPPLY
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>21 MIL</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>21 MIL</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>21 MIL</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>21 MIL</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>21 MIL</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					Distribution
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>MINING</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>MINING,CLAIMING</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>MINING,CLAIMING</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>MINING,CLAIMING</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>MINING(POW)/CONSENSUS(DPOS)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: #e8e9ed;margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					Mining Algorithm
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>SHA256(ASIC)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>SHA256(ASIC)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>EQUIHASH(GPU)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>SHA256(ASIC)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>OPTIMIZED X15 GPU/CPU</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					BLOCKTIME
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>10 MINUTES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>10 MINUTES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>10 MINUTES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>10 MINUTES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>6 SECONDS</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: #e8e9ed;margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					MAX.BLOCKSIZE (SEGWIT)
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>1 MB (2-4MB)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>2 MB (4-8MB)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>1 MB (2-4MB)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>8 MB</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>4-16 MB</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					BLOCKCHAIN SIZE
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>~145 GB</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>~145 GB</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>~145 GB</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>~135 GB</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>~125 GB</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: #e8e9ed;margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					DIFFICULTY ADJUSTMENT
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>2 WEEKS</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>2 WEEKS</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>EVERY BLOCK</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>2 WEEKS+EDA</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>1 WEEK</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					MAXTX/DAY
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>~1.2 MIL</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>~2.4 MIL</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>~1.2 MIL</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>~4.8 MIL</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>~48 MIL</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: #e8e9ed;margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					SEGWIT
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>YES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>YES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>YES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>NO</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					REPLAY PROTECTION
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NOT NECESSARY</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>YES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>YES</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>YES</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: #e8e9ed;margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					ESTABLISHED SINCE
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>2009</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NOV 2017</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>OCT 2017</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>AUG 2017</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>JAN 2018</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					AMOUNT ENCRYPTED
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>YES</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: #e8e9ed;margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					SPLIT/FORK DISTRIBUTION
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>Partial(Claimed)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>Partial(Claimed)</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>Total</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin: 0;padding: 8px 0;">
+		<div class="col s12">
+			<div class="row" style="margin: 0">
+				<div class="col s2 table-body" style="padding-left: 40px;">
+					NON USABLE/LOST BTC
+				</div>
+				<div class="col s10 flex">
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;">
+						<div>NO</div>
+					</div>
+					<div class="table-body text-center" style="width: 30%;color: #ef6c00;">
+						<div>YES</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row wto-white-bg topgap50" style="background-color: #fafafa;">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section scrollspy topgap40 bottomgap20 wow fadeIn" id="about">
+			<h5 class="text-center btd-title" style="margin-top: 20px;">
+				<div>EXCHANGES</div>
+			</h5>
+			<div class="bt-grey font-15 text-center">Following entities have expressed intent to support BTD.</div>
+			<div class="flex topgap40">
+				<img src="/img/exchanges/1.png">
+				<img src="/img/exchanges/2.png">
+				<img src="/img/exchanges/3.png">
+				<img src="/img/exchanges/4.png">
+				<img src="/img/exchanges/5.png">
+			</div>
+			<div class="flex topgap50">
+				<img src="/img/exchanges/6.png">
+				<img src="/img/exchanges/7.png">
+				<img src="/img/exchanges/8.png">
+				<img src="/img/exchanges/9.png">
+				<img src="/img/exchanges/10.png">
+			</div>
+			<div class="flex topgap50">
+				<img src="/img/exchanges/11.png">
+				<img src="/img/exchanges/12.png">
+				<img src="/img/exchanges/13.png">
+				<img src="/img/exchanges/14.png">
+				<img src="/img/exchanges/15.png">
+			</div>
+			<div class="flex topgap50">
+				<img src="/img/exchanges/16.png">
+				<img src="/img/exchanges/17.png">
+				<img src="/img/exchanges/18.png">
+				<img src="/img/exchanges/19.png">
+				<img src="/img/exchanges/20.png">
+			</div>
+
+			<div class="text-center topgap60 bottomgap40">
+				<span class="inline-block rightgap30 topgap20">
+					<span class="circle-small" style="background-color: #05e7e6;"></span>
+					<span class="font-14 bt-grey leftgap15">Trading Soon</span>
+				</span>
+				<span class="inline-block rightgap30 topgap20 leftgap20">
+					<span class="circle-small" style="background-color: #f5a623;"></span>
+					<span class="font-14 bt-grey leftgap15">Coming Soon</span>
+				</span>
+				<span class="inline-block rightgap30 leftgap20 topgap20">
+					<span class="circle-small" style="background-color: #d9adff;"></span>
+					<span class="font-14 bt-grey leftgap15">Future</span>
+				</span>
+			</div>
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row wto-white-bg topgap30">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section scrollspy topgap40 bottomgap20 wow fadeIn" id="about">
+			<h5 class="text-center btd-title" style="margin-top: 20px;">
+				<div>WALLETS</div>
+			</h5>
+			<div class="flex topgap20">
+				<img src="/img/wallets/1.png">
+				<img src="/img/wallets/2.jpg">
+				<img src="/img/wallets/3.png">
+				<img src="/img/wallets/4.png">
+				<img src="/img/wallets/5.png">
+			</div>
+			<div class="flex topgap50">
+				<img src="/img/wallets/6.png">
+				<img src="/img/wallets/7.png">
+				<img src="/img/wallets/8.png">
+				<img src="/img/wallets/9.png">
+				<img src="/img/wallets/10.png">
+			</div>
+			<div class="text-center topgap60 bottomgap40">
+				<span class="inline-block rightgap30 topgap20">
+					<span class="circle-small" style="background-color: #05e7e6;"></span>
+					<span class="font-14 bt-grey leftgap15">Coming Soon</span>
+				</span>
+				
+				<span class="inline-block rightgap30 leftgap20 topgap20">
+					<span class="circle-small" style="background-color: #d9adff;"></span>
+					<span class="font-14 bt-grey leftgap15">Future</span>
+				</span>
+			</div>
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row wto-white-bg topgap30">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section text-justify scrollspy bottomgap20 wow fadeIn" style="background-color: #f7f7fa;letter-spacing: 0.4px;line-height: 1.29;padding: 15px;border-radius: 10px;">
+			<span class="label-grey font-14">
+				Disclaimer: 
+			</span>
+			<span class="font-14" style="color:#f13434">
+				The Bitcoin Dollar (BTD) do not take any responsibility for third party providers, such as the listed exchanges, wallets, sites and pools. All links hosted on our domain are by community members and third parties and by clicking on any of the listed links you are accepting the risks of using the third party domain and taking responsibility for any losses, damage or other issues using said domain. Cryptocurrencies are inherently risky and investors and users must remain vigilant.
+			</span>
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row wto-white-bg topgap30">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 section scrollspy topgap40 bottomgap20 wow fadeIn" id="about">
+			<h5 class="text-center btd-title" style="margin-top: 20px;">
+				<div>HEREDITARY</div>
+			</h5>
+			<div class="row topgap50">
+				<div class="col s12 m6">
+					<div class="font-20 font-weight-600 label-grey">How Peter became a Millionaire ?</div>
+					<img src="/img/Youtube.jpg" class="topgap10" style="width: 80%;height: auto;">
+				</div>
+				<div class="col s12 m6">
+					<img src="/img/Structure.svg" class="topgap35" style="width: 100%;height: auto;">
+				</div>
+			</div>
+		</div>
+		<div class="col s1">&nbsp;</div>
+	</div>
+
+	<div class="row wto-white-bg topgap30">
+		<div class="col s3">&nbsp;</div>
+		<div class="col s6 section scrollspy topgap40 bottomgap20 wow fadeIn" id="about">
+			<h5 class="text-center btd-title" style="margin-top: 20px;">
+				<div class="font-36">GET IN TOUCH</div>
+			</h5>
+			<div class="font-24 bt-grey text-center" style="letter-spacing: 1.8px;">Let us answer any questions </div>
+			<div class="row topgap50">
+				<div class="col s6">
+					<div class="input-field">
+						<input placeholder="Full Name" id="full_name" type="text" class="validate" style="margin-bottom: 0;background-color: rgba(181,184,189,0.15);border:1px solid rgba(151,151,151,0.15);box-shadow: none;padding-left: 0.5rem;" ng-model="contact.userFullName">
+						<!-- <label class="active" for="first_name" style="font-size: 10px;top:10px;">FULL NAME</label> -->
+					</div>
+					<div class="input-field">
+						<input placeholder="Email" id="email" type="text" class="validate" style="margin-bottom: 0;background-color: rgba(181,184,189,0.15);border:1px solid rgba(151,151,151,0.15);box-shadow: none;padding-left: 0.5rem;" ng-model="contact.userEmailId" ng-change="validateEmail(contact.userEmailId)" required>
+						<!-- <label class="active" for="email" style="font-size: 10px;top:10px;">EMAIL</label> -->
+						<div class="font-10 topgap6" style="color: #ff6565">{{errmsg}}</div>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="input-field">
+						<textarea placeholder="Description" id="textarea1" class="materialize-textarea" ng-model="contact.userMessage" style="background-color: rgba(181,184,189,0.15);border:1px solid rgba(151,151,151,0.15);box-shadow: none;min-height: 4.8rem;padding-left: 0.5rem;margin-bottom: 0;"></textarea>
+						<!-- <label class="active" for="textarea1" style="font-size: 10px;top:10px;">YOUR MESSAGE</label> -->
+					</div>
+				</div>
+				<div class="col s12" style="padding-right: 0;">
+					<div class="btn-submit-contact topgap6">SUBMIT</div>
+				</div>
+			</div>
+		</div>
+		<div class="col s3">&nbsp;</div>
+	</div>
+
+	<!-- <div class="row">
 		<div class="col s12 parallax-container">
 			<div class="parallax"><img src="img/banner.jpg"></div>
 			<div class="wto-coming-soon topgap35">&nbsp;</div>
@@ -182,1011 +731,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 wto-white-bg topgap30 section scrollspy" id="core-values">
-			<h5 class="text-center font-27">
-				<span class="font-weight-100">Core</span>
-				<span class="font-weight-600"> Values</span>
-			</h5>
-		</div>
-		<div class="col s1">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 wto-white-bg topgap20">
-			<div class="row">
-				<div class="col s6 m4 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/trading.svg" style="margin-top: 50%;margin-left:56%;transform: translate(-50%,-50%);">
-					</span>
-					<div class="core-head-title topgap20">TRADING</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						Buying and selling of Tourcoins at different price points and generating profit from the same. You can buy Tourcoins at a lower price and sell them at a higher price.
-					</div>
-				</div>
-				<div class="col s6 m4 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/transparency.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">TRANSPARENCY</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						To provide timely, meaningful and reliable disclosures about the company's decentralized objectives, financial performance & future frameworks.
-					</div>
-				</div>
-				<div class="col s6 m4 text-center hide-on-small-only wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/terming.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">TERMING</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						The profit from this investment is generated by Tourcoin trading bot & buoyancy software based on the investment option chosen by you and our clients.
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col s1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg visible-xs-only">
-		<div class="col s12 wto-white-bg topgap20">
-			<div class="row">
-				<div class="col s6 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/terming.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">TERMING</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						The profit from this investment is generated by Tourcoin trading bot & buoyancy software based on the investment option chosen by you and our clients.
-					</div>
-				</div>
-				<div class="col s6 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/fd.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">FIXED DEPOSIT</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						An investment opportunity where you can store your Tourcoins and earn a fixed periodic interest as well as company and mining profits on the same.
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 wto-white-bg topgap20">
-			<div class="row">
-				<div class="col s2 m2 hide-on-small-only">&nbsp;</div>
-				<div class="col s6 m4 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/mining.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">MINING</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						The process by which new Tourcoins will be generated. You can mine Tourcoins with a CPU/GPU/ASIC. A total of 21 million coins will be mined.
-					</div>
-				</div>
-				<div class="col s6 m4 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/cm.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">CLOUD MINING</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						You can now join our cloud mine without the hassles of buying and maintaining equipment, managing electricity and resource cost etc.
-					</div>
-				</div>
-				<div class="col s2 m2 hide-on-small-only">&nbsp;</div>
-			</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 wto-white-bg topgap20">
-			<div class="row">
-				<div class="col s6 m4 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/staking.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">STAKING</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						Earn up to 350% return annually through restructuring & POS minting. It is very simple to earn through this method, by just holding & storing coins in your TOURCOIN-QT wallet.
-					</div>
-				</div>
-				<div class="col m4 s6 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/decentralized.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">DECENTRALIZED</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						Decision-making authority to be distributed among a larger group. It also connotes a higher authority given to Tourcoin holders, clientele, functionaries, executives, and support staff.
-					</div>
-				</div>
-				<div class="col m4 s6 text-center hide-on-small-only wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/fd.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">FIXED DEPOSIT</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						An investment opportunity where you can store your Tourcoins and earn a fixed periodic interest as well as company and mining profits on the same.
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 wto-white-bg topgap20">
-			<div class="row">
-				<div class="col s2 m2 hide-on-small-only">&nbsp;</div>
-				<div class="col s6 m4 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/am.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">ASSET MANAGEMENT</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						To create a system which monitors, manages and maintains mining along with tourism assets by systematic process of developing, operating, maintaining, upgrading, disposing of finances and human resources cost-effectively.
-					</div>
-				</div>
-				<div class="col s6 m4 text-center wow fadeIn">
-					<span class="core-img-container">
-						<img src="/img/core/globalization.svg" style="margin-top: 50%;transform: translateY(-50%);">
-					</span>
-					<div class="core-head-title topgap20">GLOBALIZATION</div>
-					<div class="core-text-container full-padding hide-on-small-only">
-						To increase interaction of people through growth in the flow of international tourists, finances, ideas and culture. It is the primary objective for an economic and decentralized process of integration which has social and cultural aspects.
-					</div>
-				</div>
-				<div class="col s2 m2 hide-on-small-only">&nbsp;</div>
-			</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-map-bg relative">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 map-bg-img relative section scrollspy" id="road-map" style="min-height: 900px;">
-			<h5 class="text-center font-27" style="margin-top: 100px;">
-				<span class="font-weight-600 label-white">ROADMAP</span>
-			</h5>
-			
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-left-1 wow fadeInLeft">
-					Dec 2015
-				</div>
-				<div class="col s12 m6 road-map-right-1 wow fadeInRight">
-					World Tourism established as a tour and travel agency which promotes tourism as a driver of economic growth, inclusive development, and environmental sustainability and offers leadership and support to the sector in advancing knowledge and tourism services worldwide.
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<span class="map-pointer-layer4"></span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-right-2 visible-xs-only">
-					Jan 2016
-				</div>
-				<div class="col s12 m6 road-map-left-2 wow fadeInLeft">
-					Successfully built a team and executed the theory and practice of touring, the business of attracting, accommodating, and entertaining tourists, and the business of operating tours. Acquired relevant licences and authorization from different organizations as well as respective central and state governments. Organized events and conferences to promote owner venture.
-				</div>
-				<div class="col s12 m6 road-map-right-2 hide-on-small-only wow fadeInRight">
-					Jan 2016
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<span class="map-pointer-layer4"></span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-left-1 wow fadeInLeft">
-					Mar 2016
-				</div>
-				<div class="col s12 m6 road-map-right-1 wow fadeInRight">
-					Organized professionals envisaged as leading to management of resources in a way that economic, social and aesthetic needs can be fulfilled while maintaining cultural integrity. Initiated major promotional activities worldwide. Catered to our very first traveler and got rated as one of the finest.
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<span class="map-pointer-layer4"></span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-right-2 visible-xs-only">
-					Aug 2016
-				</div>
-				<div class="col s12 m6 road-map-left-2 wow fadeInLeft">
-					Received our first customer from Germany and within a month, booked and catered 250 tour packages. Identified our  niche market, and established if we could compete in the existing market, and what would it take to succeed. Heartily welcomed our first PAN American client to our project. Added another value added part to our service (Adventure Tourism and Recreation)
-				</div>
-				<div class="col s12 m6 road-map-right-2 hide-on-small-only wow fadeInRight">
-					Aug 2016
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<span class="map-pointer-layer4"></span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-left-1 wow fadeInLeft">
-					Dec 2016
-				</div>
-				<div class="col s12 m6 road-map-right-1 wow fadeInRight">
-					 Brought expert crew members on-board to cater to every need of a traveller – from transportation to visa processing, hotel booking, security, travel and tour guides, insurance etc. Added legal, emigration and financial consultants globally. Spread our influences towards entrepreneurial opportunities, generating tax revenues, development in rural regions and foreign exchange generation.
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<span class="map-pointer-layer4"></span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-right-2 visible-xs-only">
-					Jan 2017
-				</div>
-				<div class="col s12 m6 road-map-left-2 wow fadeInLeft">
-					Initiated discussion with top crypto experts and legal advisors to raise further capital and integrate cryptocurrency with tourism. Formalized a team of blockchain and tourism experts as well as consultants. Reached consensus to create an ecosystem where the tourism sector will be integrated with cryptocurrencies. Structural framework for mining and token distribution created.
-				</div>
-				<div class="col s12 m6 road-map-right-2 hide-on-small-only wow fadeInRight">
-					Jan 2017
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<span class="map-pointer-layer4"></span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-left-1 wow fadeInLeft">
-					July 2017
-				</div>
-				<div class="col s12 m6 road-map-right-1 wow fadeInRight">
-					Developed a roadmap for the pre sale and ICO launch, whitepaper, mining SDKs, stacking, QT wallet creation, Smart Contract ERC 20, and blockchain integration to Tourcoin. Planned integration with  cryptocurrency exchanges and global leaders in blockchain. Expanded in-app wallet integration for global travelers and clients.
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<span class="map-pointer-layer4"></span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-right-2 visible-xs-only">
-					Dec 2017
-				</div>
-				<div class="col s12 m6 road-map-left-2 wow fadeInLeft">
-					Pre Sale launch date finalized, to take place in the 1st week of December 2017 and normal sale to begin in the 2nd week of December 2017. Extended promotional and educational campaign to be launched. Securing partnerships with major global players and introduction of planned mining and token holders reward campaign.
-				</div>
-				<div class="col s12 m6 road-map-right-2 hide-on-small-only wow fadeInRight">
-					Dec 2017
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<!-- <span class="map-pointer-layer4"></span> -->
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-left-1 wow fadeInLeft">
-					Mar 2018
-				</div>
-				<div class="col s12 m6 road-map-right-1 wow fadeInRight">
-					Introduction of blockchain based platform to integrate website, mining SDKs, stacking, QT wallets for multiple platforms, smart contract ERC 20, payment gateway, B2B, C2C and B2C support. ISO (DIN EN ISO 9001) certified softwares ( reservation, booking, management, operation ) integrated to blockchain.
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<!-- <span class="map-pointer-layer4"></span> -->
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-right-2 visible-xs-only">
-					Oct 2018
-				</div>
-				<div class="col s12 m6 road-map-left-2 wow fadeInLeft">
-					SDKs to be created for Cloud and hardware mining, integrated multiple wallets, enhanced smart contract protocols and alignment with Wave storage, navigation, wallets for fiat, mobile applications, peer to peer navigation system, tourism rating APIs etc.
-				</div>
-				<div class="col s12 m6 road-map-right-2 hide-on-small-only wow fadeInRight">
-					Oct 2018
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<!-- <span class="map-pointer-layer4"></span> -->
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-left-1 wow fadeInLeft">
-					Jan 2019
-				</div>
-				<div class="col s12 m6 road-map-right-1 wow fadeInRight">
-					Gateway to be created to integrate SSL, Biometrics, Decentralised Ledgers, Smart contracts, Open API, Internet of Things, Big Data, Applied AI, Reel world with real world and arbitrate angel and venture investors for tourism industry.
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<!-- <span class="map-pointer-layer4"></span> -->
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="row road-map-flex relative">
-				<div class="col s12 m6 road-map-right-2 visible-xs-only">
-					June 2019
-				</div>
-				<div class="col s12 m6 road-map-left-2 wow fadeInLeft">
-					 A superconductive trade and exchange mechanism to be created. To facilitate C2C, B2B and B2C spend, secure or exchange digital assets and currencies without 3rd party involvement. Mining SDKs and APIs for In-app mobile and desktop platforms.
-				</div>
-				<div class="col s12 m6 road-map-right-2 hide-on-small-only wow fadeInRight">
-					June 2019
-				</div>
-				<span class="map-pointer-container">
-					<span class="map-pointer-layer1">
-						<span class="map-pointer-layer2">
-							<span class="map-pointer-layer3">
-								<!-- <span class="map-pointer-layer4"></span> -->
-							</span>
-						</span>
-					</span>
-				</span>
-			</div>
-
-			<div class="roadmap-bottom-container">
-				<img src="/img/wonder.png" style="width: 100%;height: auto;">
-			</div>
-
-			<div class="map-middle-border"></div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap40 section scrollspy" id="distribution">
-			<h5 class="text-center font-27">
-				<span class="wto-distribution-title">TOURCOIN DISTRIBUTION STRUCTURE</span>
-			</h5>
-		</div>
-		<div class="col s1">&nbsp;</div>
-	</div>
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 topgap40">
-			<div class="row">
-				<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-				<div class="col s12 m10">
-					<div class="row">
-						<div class="col s12 m6" id="mainDistribution">
-							<canvas ng-if="showMainDistribution" class="chart chart-doughnut" chart-data="mainData" chart-labels="mainLabels" chart-colours="mainColors" chart-options="mainOptions" chart-dataset-override="mainOverride" style="width:100%;"></canvas>
-						</div>
-						<div class="col s12 m6">
-							<div class="topgap15">
-								<span class="distribution-pointer" style="background-color: #204f84"></span>
-								<span class="distribution-label">Crowdsale Investors</span>
-							</div>
-							<div class="topgap15">
-								<span class="distribution-pointer" style="background-color: #53a8e2"></span>
-								<span class="distribution-label">Bounty & rewards</span>
-							</div>
-							<div class="topgap15">
-								<span class="distribution-pointer" style="background-color: #50e3c2"></span>
-								<span class="distribution-label">Founders</span>
-							</div>
-							<div class="topgap15">
-								<span class="distribution-pointer" style="background-color: #dbecf8"></span>
-								<span class="distribution-label">Research and Promotion</span>
-							</div>
-
-							<div style="margin-top: 24px;">
-								<span class="inline-block relative">
-									<input type="email" ng-model="mailId" placeholder="Email" class="wto-news-sub" style="width: 280px!important;">
-									<img src="/img/email.svg" class="news-icon">
-									<span class="news-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span>
-								</span>
-							</div>
-
-							<div class="distributed-text" style="margin-top: 24px;width: 330px;">Total 21 million will be distributed and remaining will be mined.</div>
-						</div>
-					</div>
-				</div>
-				<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-			</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 topgap40">
-			<h5 class="text-center font-27">
-				<span class="wto-distribution-title">STRUCTURAL BONUS</span>
-			</h5>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 topgap30" id="bonusLine">
-			<div class="structural-container relative">
-				<canvas ng-if="showBonusLine" class="chart chart-doughnut" chart-data="structure.data1" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-				<span class="bonus-percent">25%</span>
-				<div class="bonus-title">PRESALE</div>
-			</div>
-			<div class="structural-container relative">
-				<canvas ng-if="showBonusLine" class="chart chart-doughnut" chart-data="structure.data2" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-				<span class="bonus-percent">15%</span>
-				<div class="bonus-title">LOT 1</div>
-			</div>
-			<div class="structural-container relative">
-				<canvas ng-if="showBonusLine" class="chart chart-doughnut" chart-data="structure.data3" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-				<span class="bonus-percent">15%</span>
-				<div class="bonus-title">LOT 2</div>
-			</div>
-			<div class="structural-container relative">
-				<canvas ng-if="showBonusLine" class="chart chart-doughnut" chart-data="structure.data4" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-				<span class="bonus-percent">10%</span>
-				<div class="bonus-title">LOT 3</div>
-			</div>
-			<div class="structural-container relative">
-				<canvas ng-if="showBonusLine" class="chart chart-doughnut" chart-data="structure.data5" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-				<span class="bonus-percent">5%</span>
-				<div class="bonus-title">LOT 4</div>
-			</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 topgap40 section scrollspy" id="rewards">
-			<h5 class="text-center font-27">
-				<span class="wto-distribution-title">REWARDS & BOUNTIES*</span>
-			</h5>
-			<div class="rewards-sub">Percentage: X% out of 5% of total number of Tourcoins</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-	<div class="row wto-white-bg">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 topgap40" id="rewardsLine">
-			<div>
-				<div class="structural-container relative">
-					<canvas ng-if="showRewardsLine" class="chart chart-doughnut" chart-data="structure.data6" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-					<span class="bonus-percent" style="top: calc(50% - 48px);">40%</span>
-					<div class="bonus-title">Referrals<br/>&nbsp;<br/>&nbsp;</div>
-				</div>
-				<div class="structural-container relative">
-					<canvas ng-if="showRewardsLine" class="chart chart-doughnut" chart-data="structure.data7" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-					<span class="bonus-percent" style="top: calc(50% - 48px);">20%</span>
-					<div class="bonus-title">BitcoinTalk <br/> Signature & Translation Campaign</div>
-				</div>
-				<div class="structural-container relative">
-					<canvas ng-if="showRewardsLine" class="chart chart-doughnut" chart-data="structure.data8" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-					<span class="bonus-percent" style="top: calc(50% - 48px);">10%</span>
-					<div class="bonus-title">Facebook & Twitter Followers<br/>&nbsp;</div>
-				</div>
-				<div class="structural-container relative">
-					<canvas ng-if="showRewardsLine" class="chart chart-doughnut" chart-data="structure.data9" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-					<span class="bonus-percent" style="top: calc(50% - 48px);">20%</span>
-					<div class="bonus-title">Bug and Threat<br/>Support<br/>&nbsp;</div>
-				</div>
-				<div class="structural-container relative">
-					<canvas ng-if="showRewardsLine" class="chart chart-doughnut" chart-data="structure.data10" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
-					<span class="bonus-percent" style="top: calc(50% - 48px);">10%</span>
-					<div class="bonus-title">Top ICO Contributors<br/>&nbsp;<br/>&nbsp;</div>
-				</div>
-			</div>
-			<div class="reward-bottom-text">* Investors with the highest number of referrals will be awarded tour package of their respective choice (T&C apply).</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg wow fadeIn">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 topgap40">
-			<div class="row">
-				<div class="col s6 m6 hide-on-small-only">
-					<img src="/img/mobile.png" style="width: 90%;height: auto;">
-				</div>
-				<div class="col s12 m6 center-xs">
-					<div class="app-soon topgap50">COMING SOON</div>
-					<div class="font-20 topgap12" style="color: #9b9b9b;">ON GOOGLE PLAY & APP STORE</div>
-					<div class="topgap40">
-						<img src="/img/appstore.svg">
-						<img src="/img/google-play.svg" class="leftgap15">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 wto-white-bg topgap30 section scrollspy" id="client">
-			<h5 class="text-center font-27">
-				<span class="global-players">GLOBAL PLAYERS & MARKET MOVERS</span>
-			</h5>
-		</div>
-		<div class="col s1">&nbsp;</div>
-	</div>
-
-	<div class="row wto-grey-bg">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap12">
-			<div class="row">
-				<div class="bottomgap20">
-					<h5 class="text-center font-27">
-						<span class="font-20" style="color: #4a4a4a">BRINGING TOGETHER</span>
-					</h5>
-				</div>
-				<div class="col s12 text-center brand-imgs slick-car-1 hide-on-small-only">
-					<div>
-						<a href="http://www.africatravelassociation.org/" target="_blank">
-							<img src="/img/logo/africa.png">
-						</a>
-					</div>
-
-					<div>
-						<a href="https://www.schauinsland-reisen.de/" target="_blank">
-							<img src="/img/logo/schau.png">
-						</a>
-					</div>
-
-					<div>
-						<a href="https://www.gousa.in/" target="_blank">
-							<img src="/img/logo/american.png">
-						</a>
-					</div>
-
-					<div>
-						<a href="http://www.pure-travelgroup.com/" target="_blank">
-							<img src="/img/logo/pure.png">	
-						</a>
-					</div>
-
-					<div>
-						<a href="http://www.auseco.com.au/" target="_blank">
-							<img src="/img/logo/earth.png">
-						</a>
-					</div>
-
-					<div>
-						<a href="https://www.safariland.com/" target="_blank">
-							<img src="/img/logo/safari.png">
-						</a>
-					</div>
-
-					<div>
-						<a href="http://www.asiatravel.com/" target="_blank">
-							<img src="/img/logo/1.jpg">
-						</a>
-					</div>
-
-					<div>
-						<a href="https://www.nycgo.com/" target="_blank">
-							<img src="/img/logo/2.jpg">
-						</a>
-					</div>
-
-					<div>
-						<a href="http://www.australia.com/en-in" target="_blank">
-							<img src="/img/logo/3.jpg">
-						</a>
-					</div>
-
-					<div>
-						<a href="https://www.visitnorway.com/" target="_blank">
-							<img src="/img/logo/4.jpg">
-						</a>
-					</div>
-
-					<div>
-						<a href="https://apollotourism.com/" target="_blank">
-							<img src="/img/logo/5.jpg">
-						</a>
-					</div>
-
-					<div>
-						<a href="https://www.visitbritain.com/in/en" target="_blank">
-							<img src="/img/logo/6.jpg">
-						</a>
-					</div>
-
-					<div>
-						<a href="http://www.brazil.org.za/tourism.html" target="_blank">
-							<img src="/img/logo/7.jpg">
-						</a>
-					</div>
-
-					<div>
-						<a href="http://www.francetourism.com/" target="_blank">
-							<img src="/img/logo/8.jpg">
-						</a>
-					</div>
-
-					<div>
-						<a href="https://travel.gc.ca/" target="_blank">
-							<img src="/img/logo/9.jpg">
-						</a>
-					</div>
-				</div>
-				<div class="text-center brand-imgs visible-xs-only">
-					<div class="col s12 slick-car-3">
-						<div>
-							<img src="/img/logo/africa.png">
-						</div>
-
-						<div>
-							<img src="/img/logo/schau.png">
-						</div>
-
-						<div>
-							<img src="/img/logo/american.png">
-						</div>
-
-						<div>
-							<img src="/img/logo/pure.png">	
-						</div>
-
-						<div>
-							<img src="/img/logo/earth.png">
-						</div>
-
-						<div>
-							<img src="/img/logo/safari.png">
-						</div>
-
-						<div>
-							<img src="/img/logo/1.jpg">
-						</div>
-
-						<div>
-							<img src="/img/logo/2.jpg">
-						</div>
-
-						<div>
-							<img src="/img/logo/3.jpg">
-						</div>
-
-						<div>
-							<img src="/img/logo/4.jpg">
-						</div>
-
-						<div>
-							<img src="/img/logo/5.jpg">
-						</div>
-
-						<div>
-							<img src="/img/logo/6.jpg">
-						</div>
-
-						<div>
-							<img src="/img/logo/7.jpg">
-						</div>
-
-						<div>
-							<img src="/img/logo/8.jpg">
-						</div>
-
-						<div>
-							<img src="/img/logo/9.jpg">
-						</div>
-					</div>
-				</div>
-				<div class="text-center topgap30 hide-on-small-only">
-					<div class="col s1">&nbsp;</div>
-					<div class="col s8 slick-car-2 brand-imgs topgap30" dir="rtl">
-						<div>
-							<a href="https://www.visitbritain.com/in/en" target="_blank">
-								<img src="/img/logo/travel.png">	
-							</a>
-						</div>
-
-						<div>
-							<a href="https://www.jnto.go.jp/" target="_blank">
-								<img src="/img/logo/japan.png">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://www.worldexpeditions.com/North-America" target="_blank">
-								<img src="/img/logo/adventure.png">	
-							</a>
-						</div>
-
-						<div>
-							<a href="http://www.cnto.org/" target="_blank">
-								<img src="/img/logo/ebooking.png">	
-							</a>
-						</div>
-
-						<div>
-							<a href="http://www.germany.travel/en/index.html" target="_blank">
-								<img src="/img/logo/10.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://english.visitkorea.or.kr/enu/index.jsp" target="_blank">
-								<img src="/img/logo/11.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="https://visitabudhabi.ae/in-en/default.aspx" target="_blank">
-								<img src="/img/logo/12.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://kibatours.com/" target="_blank">
-								<img src="/img/logo/13.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://madtravel.org/" target="_blank">
-								<img src="/img/logo/14.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://www.carelitours.net/" target="_blank">
-								<img src="/img/logo/15.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://www.mrtourguide.in/" target="_blank">
-								<img src="/img/logo/16.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://www.lidtravel.com/" target="_blank">
-								<img src="/img/logo/17.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://beachpark.com.br/pacotes/?gclid=CjwKCAiAo9_QBRACEiwASknDwXenRgW-G0jZTaFi4We1YAryU4mj1O8eOM3L1LcShbpkdgyeYc8rfhoCaIAQAvD_BwE" target="_blank">
-								<img src="/img/logo/18.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="https://www.usatoday.com/travel/" target="_blank">
-								<img src="/img/logo/19.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://wildwood-adventure.com/" target="_blank">
-								<img src="/img/logo/20.jpg">
-							</a>
-						</div>
-
-						<div>
-							<a href="http://www.auto.or.ug/">
-								<img src="/img/logo/21.jpg">
-							</a>
-						</div>
-					</div>
-					<div class="col s3 counter-imgs topgap30 text-left">
-						<a href="https://s3.ap-south-1.amazonaws.com/tourcoin/whitepaper.pdf" target="_blank">
-							<img src="/img/logo/250.png" style="width: 100px;margin-top: 25px;">
-						</a>
-					</div>
-				</div>
-
-				<div class="text-center topgap30 visible-xs-only">
-					<div class="col s12 slick-car-4 brand-imgs topgap30" dir="rtl">
-						<div style="width: 172px!important">
-							<img src="/img/logo/travel.png">	
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/japan.png">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/adventure.png">	
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/ebooking.png">	
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/10.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/11.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/12.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/13.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/14.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/15.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/16.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/17.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/18.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/19.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/20.jpg">
-						</div>
-
-						<div style="width: 172px!important">
-							<img src="/img/logo/21.jpg">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col s1">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap12">
-			<div class="row">
-				<div class="bottomgap20">
-					<h5 class="text-center font-27">
-						<span class="font-20" style="color: #4a4a4a">TO COUNTER</span>
-					</h5>
-				</div>
-				<div class="col s12 text-center counter-imgs hide-on-small-only">
-					<a href="https://www.amexglobalbusinesstravel.com/eng/" target="_blank">
-						<img src="/img/logo/americanexp.png">
-					</a>
-					<a href="https://www.thomascook.com/" target="_blank">
-						<img src="/img/logo/thomas.png">
-					</a>
-					<a href="http://www.frosch.com/" target="_blank">
-						<img src="/img/logo/frosch.png">
-					</a>
-					<a href="http://www.pricelinegroup.com/" target="_blank">
-						<img src="/img/logo/priceline.png">
-					</a>
-					<a href="http://www.coxandkings.com/" target="_blank">
-						<img src="/img/logo/cox.png">
-					</a>
-					<a href="http://www.carlsonwagonlit.in/content/cwt/us/en/home.html" target="_blank">
-						<img src="/img/logo/carlson.png">
-					</a>
-				</div>
-				<div class="col s12 text-center counter-imgs visible-xs-only">
-					<a href="https://www.amexglobalbusinesstravel.com/eng/" target="_blank">
-						<img src="/img/logo/americanexp.png">
-					</a>
-					<a href="https://www.thomascook.com/" target="_blank">
-						<img src="/img/logo/thomas.png">
-					</a>
-					<a href="http://www.frosch.com/" target="_blank">
-						<img src="/img/logo/frosch.png">
-					</a>
-				</div>
-				<div class="col s12 text-center counter-imgs topgap30 visible-xs-only">
-					<a href="http://www.pricelinegroup.com/" target="_blank">
-						<img src="/img/logo/priceline.png">
-					</a>
-					<a href="http://www.coxandkings.com/" target="_blank">
-						<img src="/img/logo/cox.png">
-					</a>
-					<a href="http://www.carlsonwagonlit.in/content/cwt/us/en/home.html" target="_blank">
-						<img src="/img/logo/carlson.png">
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="col s1">&nbsp;</div>
-	</div>
-
-	<div class="row wto-white-bg" style="border-top: 4px solid #faf9fe">
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 topgap20 bottomgap40">
-			<div class="row">
-				<div>
-					<h5 class="text-center" style="margin-top: 20px;margin-bottom: 0;">
-						<span class="font-24" style="color: #7f848b">Subscribe For Newsletter</span>
-					</h5>
-				</div>
-				<div class="col s12 text-center topgap30">
-					<span class="inline-block relative">
-						<input type="email" ng-change="validateEmail(mailId)" ng-model="mailId" placeholder="Email" class="wto-news-sub">
-						<img src="/img/email.svg" class="news-icon">
-						<span class="news-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span>
-					</span>
-					<div class="font-10" style="color: red;margin-top: 4px;">{{errmsg}}</div>
-				</div>
-			</div>
-		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-	</div>
+	</div> -->
 </div>

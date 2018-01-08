@@ -1,45 +1,45 @@
 @font-face {
-    font-family: Montserrat;
+    font-family: Titillium;
     font-weight: normal;
-    src: url("/fonts/Montserrat-Regular.otf") format("opentype");
+    src: url("/fonts/Titillium-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Montserrat;
+    font-family: Titillium;
     font-weight: 600;
-    src: url("/fonts/Montserrat-Bold.otf") format("opentype");
+    src: url("/fonts/Titillium-Bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Montserrat;
+    font-family: Titillium;
     font-weight: 500;
-    src: url("/fonts/Montserrat-SemiBold.otf") format("opentype");
+    src: url("/fonts/Titillium-SemiBold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Montserrat;
+    font-family: Titillium;
     font-weight: 400;
-    src: url("/fonts/Montserrat-Light.otf") format("opentype");
+    src: url("/fonts/Titillium-Light.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Montserrat;
+    font-family: Titillium;
     font-weight: 300;
-    src: url("/fonts/Montserrat-ExtraLight.otf") format("opentype");
+    src: url("/fonts/Titillium-Thin.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Montserrat;
+    font-family: Titillium;
     font-weight: 100;
-    src: url("/fonts/Montserrat-Thin.otf") format("opentype");
+    src: url("/fonts/Titillium-Thin.otf") format("opentype");
 }
-@font-face {
+/*@font-face {
     font-family: BebasNeue;
     src: url("/fonts/BebasNeue.otf") format("opentype");
-}
+}*/
 
 html,body {
-	font-family: Montserrat!important;
+	font-family: Titillium!important;
 	-webkit-font-smoothing: antialiased;
 	font-size-adjust: 0.5 !important;
 }
@@ -264,21 +264,6 @@ html,body {
 .inline-block{
 	display: inline-block;
 }
-video { 
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -100;
-	transform: translateX(-50%) translateY(-50%);
-	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-	background-size: cover;
-	transition: 1s opacity;
-	background-repeat: no-repeat;
-}
 .wto-container{
 	padding: 0!important;
 	margin: auto 0!important;
@@ -287,19 +272,19 @@ video {
 }
 .wto-home-bg{
 	min-height: 100vh!important;
-	/*background-image: url('/img/world-map.jpg');
+	background-image: url('/img/bg.jpg');
 	background-size: cover;
-	background-repeat: no-repeat;*/
+	background-repeat: no-repeat;
 }
 .wto-home-span{
-	font-size:24px;
+	font-size:48px;
 	font-weight: 600;
-	color: #fff;
+	color: #ff9f00;
 	display: inline-block;
+	letter-spacing: 1px;
 	vertical-align: middle;
 }
 .wto-journey-text{
-	font-family: Montserrat;
 	font-size: 12px;
 	font-weight: bold;
 	line-height: 2.08;
@@ -325,8 +310,12 @@ video {
 	top: 45%;
 	left: 50%;
 	transform: translate(-50%,-50%);*/
-	font-size: 27px;
+	font-size: 30px;
 	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.5;
+	letter-spacing: 1px;
 	text-align: center;
 	color: #fff;
 	/*width: 60%;*/
@@ -573,7 +562,7 @@ input:focus{
 .wto-footer-row{
 	background-color: #fff;
 	border-top:2px solid #e8e9ed;
-	border-bottom:2px solid #e8e9ed;
+	margin-bottom: 0!important;
 }
 .social-container{
 	padding: 30px 0;
@@ -798,11 +787,14 @@ input:focus{
 .wto-anchor{
 	padding: 14px 14px;
 	line-height: initial;
-	opacity: 0.5;
-	font-family: Montserrat;
-	font-size: 12px;
-	font-weight: bold;
-	letter-spacing: 2.4px;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.4px;
+	text-align: center;
+	color: #ffffff;
 	text-align: center;
 	color: #9b9b9b;
 	background-color: transparent!important;
@@ -810,10 +802,10 @@ input:focus{
 	border-bottom: 3px solid #eaeaea;
 }
 .wto-anchor:hover{
-	color: #dad2d2;
+	color: #ff9f00;
 }
 .anchor-active{
-	border-color: #50e3c2;
+	border-color: #ff9f00;
 }
 .border-none{
 	border-color: transparent!important;
@@ -962,7 +954,7 @@ input:focus{
 	margin-left: 135px;
 }
 .login-bg{
-	background-image: url('/img/log-bg.jpg');
+	background-image: url('/img/bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;

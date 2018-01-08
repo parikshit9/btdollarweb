@@ -1,0 +1,126 @@
+.btd-join-btn{
+	width: 230px;
+	height: 50px;
+	border-radius: 1px;
+	background-color: #ffa001;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.11;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+.bottom-prices{
+	position: absolute;
+	bottom: 70px;
+	text-align: center;
+	width: 100%;
+}
+.price-section{
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.4px;
+	text-align: center;
+	color: #ffffff;
+	margin: 0 10px;
+}
+.yellow{
+	color: #ffa001;
+}
+.btd-title{
+	font-size: 30px;
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.4;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #ffa001;
+}
+.feature-title{
+	font-size: 24px;
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.7px;
+	text-align: left;
+	color: #233d4e;
+}
+.text-justify{
+	text-align: justify;
+}
+.feature-sm-title{
+	font-size: 17px;
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.41;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #233d4e;
+	margin-top: 10px;
+}
+.table-title{
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+	color: #233d4e;
+}
+.table-body{
+	font-size: 14px;
+	color: #233d4e;
+}
+.bt-grey{
+	color: #233d4e;
+}
+.faq-head{
+	font-size: 24px;
+	letter-spacing: 0.7px;
+	color: #ffa001;
+}
+.faq-title{
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 0.4px;
+	color: #233d4e;
+	margin-top: 20px;
+}
+.faq-body{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.79;
+	letter-spacing: 0.4px;
+	color: #233d4e;
+	margin-top: 20px;
+}
+.circle-small{
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+}
+.btn-submit-contact{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	width: 100%;
+	height: 48px;
+	border-radius: 3px;
+	background-color: #ffa001;
+	color: #fff;
+}
