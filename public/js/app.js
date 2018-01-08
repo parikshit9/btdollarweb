@@ -22,9 +22,9 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
             templateUrl: "/views/home.html",
             controller: "wtoController"
         })
-        .state("vision", {
-            url: "/vision",
-            templateUrl: "/views/vision.html",
+        .state("team", {
+            url: "/team",
+            templateUrl: "/views/team.html",
             controller: "wtoController"
         })
         .state("login", {
@@ -91,6 +91,11 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
             url: "/dashboard_1",
             templateUrl: "/views/dashboard-1.html",
             controller: "wtoDashboardCtrl"
+        })
+        .state("ecosystem", {
+            url: "/ecosystem",
+            templateUrl: "/views/ecoSystem.html",
+            controller: "wtoController"
         })
     // $locationProvider.html5Mode(true);
 });
