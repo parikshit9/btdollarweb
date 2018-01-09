@@ -199,3 +199,69 @@
 	box-shadow: none;
 	border:none;
 }
+.on-border-position{
+	display: inline-block;
+	position: absolute;
+	background-color: #fff;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -17px;
+	width: 250px;
+}
+.road-map-container{
+	width: 100%;
+	height: 80px;
+	/*transform: rotate(-25deg);*/
+	border-radius: 100px;
+	background-color: #e8e9ed;
+	padding: 10px;
+	display: flex;
+}
+.road-map-circle{
+	width: 60px;
+	height: 60px;
+	background-color: #ffa001;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+.road-map-inside{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(100% - 80px);
+	font-size: 16px;
+	font-weight: 600;
+	color: #233d4e;
+}
+.road-map-bottom{
+	font-size: 12px;
+	line-height: 1.14;
+	text-align: left;
+	color: #233d4e;
+	text-align: center;
+	margin-top: 20px;
+}
+.main-road-map{
+	transform: rotateZ(-25deg);
+	margin-top: 100px;
+}
+.rm-inside-text{
+	display: inline-block;
+	transform: rotateZ(25deg);
+}
+.road-map-year{
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.33;
+	text-align: center;
+	color: #233d4e;
+	position: absolute;
+    left: 26px;
+    bottom: -40px;
+}

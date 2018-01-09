@@ -5,28 +5,28 @@
 				<a href="#" data-activates="mobile-nav" class="button-collapse" style="color: #9b9b9b;margin: 0;"><i class="material-icons">menu</i></a>
 				<ul class="wto-nav-ul right hide-on-small-only">
 					<li ng-if="state.current.name == 'home'">
-						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#about">ABOUT US</a>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#about">FEATURES</a>
 					</li>
 					<li ng-if="state.current.name != 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">HOME</a>
 					</li>
 
-					<li ng-if="state.current.name == 'vision'">
-						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#crew">CREW</a>
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#wallet">WALLETS</a>
 					</li>
-					<li ng-if="state.current.name != 'vision'">
-						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="vision">CREW</a>
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">WALLETS</a>
 					</li>
 
 					<li>
-						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'vision' ? 'anchor-active':''}}" ui-sref="vision">VISION</a>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'team' ? 'anchor-active':''}}" ui-sref="team">TEAM</a>
 					</li>
 
 					<li ng-if="state.current.name == 'home'">
-						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#rewards">REWARDS</a>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#exchanges">EXCHANGES</a>
 					</li>
 					<li ng-if="state.current.name != 'home'">
-						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">REWARDS</a>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">EXCHANGES</a>
 					</li>
 
 					<li ng-if="state.current.name == 'home'">
@@ -36,16 +36,16 @@
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">ROAD MAP</a>
 					</li>
 
-					<li ng-if="state.current.name == 'home'">
+					<!-- <li ng-if="state.current.name == 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#client">CLIENTELE</a>
-					</li>
-					<li ng-if="state.current.name != 'home'">
-						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">CLIENTELE</a>
+					</li> -->
+					<li ng-if="state.current.name != 'ecosystem'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'ecosystem' ? 'anchor-active':''}}" ui-sref="ecosystem">ECOSYSTEM</a>
 					</li>
 
-					<li>
+					<!-- <li>
 						<a href="https://s3.ap-south-1.amazonaws.com/tourcoin/whitepaper.pdf" target="_blank" class="wto-anchor {{boolChangeClass?'':'border-none'}}">WHITEPAPER</a>
-					</li>
+					</li> -->
 
 					<li>
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'faq' ? 'anchor-active':''}}" ui-sref="faq">FAQs</a>
@@ -54,7 +54,7 @@
 					<li ng-if="state.current.name == 'dashboard' || state.current.name == 'dashboard_1'"><a class="dropdown-button wto-anchor" style="border-bottom:none!important" href="#!" data-activates="dropdown1">MY ACCOUNT<i class="material-icons log-icon right">arrow_drop_down</i></a></li>
 				</ul>
 
-				<ul class="side-nav" id="mobile-nav">
+				<!-- <ul class="side-nav" id="mobile-nav">
 					<li ng-if="state.current.name == 'home'"><a href="#about">About Us</a></li>
 					<li ng-if="state.current.name == 'home'"><a href="#road-map">Road Map</a></li>
 					<li ng-if="state.current.name == 'vision'"><a href="#crew">Crew</a></li>
@@ -76,7 +76,7 @@
 
 				<ul id="dropdown1" class="dropdown-content">
 					<li><a style="font-size: 12px;color: #05e7e6;" href="#!" ng-click="logout()">LOGOUT</a></li>
-				</ul>
+				</ul> -->
 			</div>
 		</nav>		
 	</div>
