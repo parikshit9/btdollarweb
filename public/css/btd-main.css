@@ -265,3 +265,9 @@
     left: 26px;
     bottom: -40px;
 }
+.hidden{
+	display: none;
+}
+.btd-yellow{
+    color: #ffa001;
+}

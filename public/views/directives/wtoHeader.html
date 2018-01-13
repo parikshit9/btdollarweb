@@ -3,6 +3,8 @@
 		<nav scroll class="wto-fixed-nav {{boolChangeClass?'wto-white-nav':'wto-trans-nav'}}">
 			<div class="col s12">
 				<a href="#" data-activates="mobile-nav" class="button-collapse" style="color: #9b9b9b;margin: 0;"><i class="material-icons">menu</i></a>
+				<img src="/img/logo-nav-w.svg" class="topgap6 {{boolChangeClass?'hidden':''}}">
+				<img src="/img/logo-nav-y.svg" class="topgap6 {{boolChangeClass?'':'hidden'}}">
 				<ul class="wto-nav-ul right hide-on-small-only">
 					<li ng-if="state.current.name == 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#about">FEATURES</a>
@@ -40,7 +42,7 @@
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#client">CLIENTELE</a>
 					</li> -->
 					<li ng-if="state.current.name != 'ecosystem'">
-						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'ecosystem' ? 'anchor-active':''}}" ui-sref="ecosystem">ECOSYSTEM</a>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'ecosystem' ? 'anchor-active':''}}" ui-sref="ecosystem">MEDIA</a>
 					</li>
 
 					<!-- <li>
