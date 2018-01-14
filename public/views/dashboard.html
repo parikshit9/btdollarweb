@@ -1,201 +1,93 @@
-<div class="wto-container" style="background-color: #f7f7fa;">
-	<div class="row" style="margin-top: 80px;">
-		<div class="col s2 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m10 topgap60" style="padding:0;">
-			<div class="half-padding">
-				<a class="font-14 label-grey" target="_blank" href="https://s3.ap-south-1.amazonaws.com/tourcoin/invest.pdf">PROCESS TO INVEST</a>
-			</div>
-			<div class="row">
-				<div class="col s12 m12">
-					<div class="dash-block-1">
-						<div class="row" style="margin-bottom: 0;">
-							<div class="col s12 m6" style="padding: 0;">
-								<span class="inline-block label-light-grey font-14 rightgap20">Current Balance:</span>
+<div class="wto-container">
+	<div class="row" style="margin-bottom: 0;background-color: #4c4c4c">
+		<div class="col s4 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m7" style="margin-top: 120px">
+			<div class="btd-login-title">CROWDFUNDING</div>
+			<div class="row btd-signin-bg topgap10">
+				<div class="col s1">&nbsp;</div>
+				<div class="col s10" style="padding: 54px 0;">
+					<div class="font-16 font-white" style="line-height: 1.75;letter-spacing: 0.3px;">
+						<span class="font-weight-600">SEND YOUR CONTRIBUTION:</span>
+						 The foundation will recommend an allocation rate of 2.00 USD/BTD (Two USD per Bitcoin Dollar) as well as time-based Bonus. The current bonus rate is 20% and will remain valid for all contributions.
+					</div>
+					<div class="topgap20 font-16 font-white" style="line-height: 1.75;letter-spacing: 0.3px;">
+						<span class="font-weight-600">RATE:</span>
+						  Enter the amount you wish to contribute, in USD, BTD(Bitcoin Dollar)
+					</div>
+					<div class="topgap10 dash-red">
+						Note: BTD amount is approximate when funding with USD, BTC, ETH, and other Altcoins.
+					</div>
 
-								<span class="inline-block font-36 label-grey font-weight-500">0.00 WTO</span>
+					<div class="topgap80 dash-box relative">
+						<div class="row" style="margin-top: 65px;">
+							<div class="col s4">
+								<div class="money-container">100</div>
+								<div class="curreny-container">BITCOIN DOLLAR (BTD)</div>
 							</div>
-							<div class="col s12 m6" style="padding: 0;position: relative;">
-								<button class="btn-submit right" ng-if="!showLink" ng-click="refer()" style="margin-left: 0;transform: none;">INVITE A FRIEND</button>
-								<div ng-if="showLink" class="font-12 label-light-grey" style="padding:0 30px;margin-bottom: 6px;">Your referral link</div>
-								<input type="text" ng-readonly="true" class="wallet-input width-override right" ng-if="showLink" ng-model="userData.userReferralLink" id="referLink" style="padding: 0 15px!important;">
-								<span class="send-wallet-btn" ng-click="copyRefer()" ng-if="showLink" style="top: 32px;right: 8px;">COPY</span>
+							<div class="col s4 text-center">
+								<img src="/img/equal.svg" style="margin-top: 35px;">
+							</div>
+							<div class="col s4">
+								<div class="money-container">$ 200.00</div>
+								<div class="curreny-container">USD</div>
+							</div>
+						</div>
+						<div class="bonus-container" style="top: -30px;">
+							<span class="inline-block">
+								<div class="inline-block font-12 text-center" style="letter-spacing: 0.2px;color: rgba(255,255,255,0.75);">CURRENT BONUS</div>
+								<div class="font-24 font-weight-600 font-white text-center" style="letter-spacing: 0.4px;">20%</div>
+							</span>
+						</div>
+						<div class="bonus-container" style="bottom: -30px;">
+							<span class="inline-block">
+								<div class="inline-block font-12 text-center" style="letter-spacing: 0.2px;color: rgba(255,255,255,0.75);">BTD TOTAL</div>
+								<div class="font-24 font-weight-600 font-white text-center" style="letter-spacing: 0.4px;">120</div>
+							</span>
+						</div>
+					</div>
+					<div style="margin-top: 90px;">
+						<div class="font-16 font-weight-600 font-white text-center" style="letter-spacing: 0.3px;">CONTRIBUTION OPTIONS</div>
+						<div class="row topgap25">
+							<div class="col s6 contri-btn" style="width: 48%;margin-right: 24px;">
+								<img src="/img/contribution/btc.svg" style="vertical-align: bottom;">
+								<span class="inline-block leftgap12">BITCOIN</span>
+							</div>
+							<div class="col s6 contri-btn" style="width: 48%;">
+								<img src="/img/contribution/ether.svg" style="vertical-align: bottom;">
+								<span class="inline-block leftgap12">ETHEREUM</span>
+							</div>
+						</div>
+						<div class="row topgap20">
+							<div class="col s6 contri-btn" style="width: 48%;margin-right: 24px;">
+								<img src="/img/contribution/coinpayments.svg" style="vertical-align: middle;margin-top: -6px;">
+								<span class="inline-block leftgap12">ALTCOINS VIA COINPAYMENTS</span>
+							</div>
+							<div class="col s6 contri-btn" style="width: 48%;">
+								<img src="/img/contribution/ether.svg" style="vertical-align: sub;">
+								<span class="inline-block leftgap12">FIAT MONEY VIA PAYPAL</span>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<div class="col s12 m12">
-					<div class="dash-block-1">
-						<div class="row">
-							<div class="col s12 m6">
-								<div class="label-grey font-24 text-center topgap40">
-									<span class="font-weight-500">Bitcoin</span>
-									<span> & </span>
-									<span class="font-weight-500">Ethereum</span>
-									<span> funding<br/>options will be available from<br/> 1. DEC. 2017</span>
-								</div>
-							</div>
-							<div class="col s12 m6">
-								<div class="wto-presell text-center" style="margin-top: 40px;">
-									<span class="font-weight-500" style="color:#4a4a4a;">PRESALE</span>
-									<span class="font-weight-300" style="color:#4a4a4a;"> STARTS</span>
-								</div>
-								<div class="topgap40">
-									<div class="text-center font-30">
-										<span class="inline-block wto-countdown" id="countdash-dy" style="color:#4a4a4a;"></span>
-										<span class="inline-block wto-countdown" style="color:#4a4a4a;"> : </span>
-										<span class="inline-block wto-countdown" id="countdash-hr" style="color:#4a4a4a;"></span>
-										<span class="inline-block wto-countdown" style="color:#4a4a4a;"> : </span>
-										<span class="inline-block wto-countdown" id="countdash-mn" style="color:#4a4a4a;"></span>
-										<span class="inline-block wto-countdown" style="color:#4a4a4a;"> : </span>
-										<span class="inline-block wto-countdown" id="countdash-sc" style="color:#4a4a4a;"></span>
-									</div>
-									<div class="text-center topgap6">
-										<span class="inline-block wto-dhms">
-											DAYS
-										</span>
-										<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
-										<span class="inline-block wto-dhms">
-											HOURS
-										</span>
-										<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
-										<span class="inline-block wto-dhms">
-											MINUTES
-										</span>
-										<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
-										<span class="inline-block wto-dhms">
-											SECONDS
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col s12 m6" style="padding-right: 5px;">
-					<div class="dash-block-2 topgap10" style="display: none;">
-						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
-							Bitcoin Funding
-						</div>
-						<div class="text-center" style="padding: 20px;">
-							<div class="dash-click-generate">
-								Click to Generate<br/>Bitcoin Address
-							</div>
-							<div class="join-ico topgap40 cursor" style="width: 240px;padding: 13px 0;margin-left: 0;">
-								<span class="inline-block leftgap20 middle">INVEST WITH BTC</span>
-								<span class="ico-arrow" style="padding: 4px 15px;">
-									<img class="middle" src="/img/bitcoin.svg" width="15">
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="dash-block-2 topgap10 relative" ng-if="!editBtcMode">
-						<input type="text" name="wallet" class="wallet-input" ng-model="dashData.userWallet.bitcoin.walletId"  ng-disabled="btcFlag">
-						<span class="send-wallet-btn" ng-click="addWalletId('BITCOIN',dashData.userWallet.bitcoin.walletId)" ng-if="!btcFlag">SAVE</span>
-						<span class="send-wallet-btn" ng-click="showEdit('BTC')" ng-if="btcFlag">EDIT</span>
-
-						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
-					</div>
-
-					<div class="dash-block-2 topgap10 relative" ng-if="editBtcMode">
-						<input type="text" name="wallet" class="wallet-input" ng-model="edit.btcWallet">
-						<span class="send-wallet-btn"  ng-click="editWalletId('BITCOIN',edit.btcWallet)">UPDATE</span>
-
-						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
-					</div>
-				</div>
-
-				<div class="col s12 m6" style="padding-left: 5px;">
-					<div class="dash-block-2 topgap10" style="display: none;">
-						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
-							Ethereum Funding
-						</div>
-						<div class="text-center" style="padding: 20px;">
-							<div class="dash-click-generate">
-								Click to Generate<br/>Etherium Address
-							</div>
-							<div class="join-ico topgap40 cursor" style="width: 240px;padding: 13px 0;margin-left: 0;">
-								<span class="inline-block leftgap20 middle">INVEST WITH ETH</span>
-								<span class="ico-arrow" style="padding: 4px 15px;">
-									<img class="middle" src="/img/ethereum.svg" width="15">
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="dash-block-2 topgap10 relative" ng-if="!editEthMode">
-						<input type="text" name="wallet" class="wallet-input" ng-model="dashData.userWallet.eherium.walletId" ng-disabled="ethFlag">
-						<span class="send-wallet-btn" ng-click="addWalletId('ETH',dashData.userWallet.eherium.walletId)" ng-if="!ethFlag">SAVE</span>
-						<span class="send-wallet-btn" ng-click="showEdit('ETH')" ng-if="ethFlag">EDIT</span>
-
-						<div class="font-12 label-grey text-center">Please input the ETHEREUM wallet address from<br/>where you will send your Ether.</div>
-					</div>
-
-					<div class="dash-block-2 topgap10 relative" ng-if="editEthMode">
-						<input type="text" name="wallet" class="wallet-input" ng-model="edit.ethWallet">
-						<span class="send-wallet-btn" ng-click="editWalletId('ETH',edit.ethWallet)">UPDATE</span>
-
-						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
-					</div>
-				</div>
-
-				<div class="col s12 m12">
-					<div class="dash-block-2 topgap10">
-						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
-							Current Bonus 25%
-						</div>
-						<div class="text-center" style="padding: 20px;">
-							<div class="dash-percent-blocks">
-								<div class="dash-percent">25%</div>
-								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">PRESALE</div>
-							</div>
-
-							<div class="dash-percent-blocks">
-								<div class="dash-percent">15%</div>
-								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 1</div>
-							</div>
-
-							<div class="dash-percent-blocks">
-								<div class="dash-percent">15%</div>
-								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 2</div>
-							</div>
-
-							<div class="dash-percent-blocks">
-								<div class="dash-percent">10%</div>
-								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 3</div>
-							</div>
-
-							<div class="dash-percent-blocks">
-								<div class="dash-percent">5%</div>
-								<div class="text-center font-14 font-weight-500 label-light-grey topgap10">LOT 4</div>
-							</div>
-						</div>
-						<div class="text-center topgap25 font-14 label-light-grey" style="letter-spacing: -0.2px">
-							* Investors with highest number of referrals will be awarded tour package of their respective choice (T&C apply).
-						</div>
-					</div>
-				</div>
-
-				<div class="col s12 m12 hide-on-small-only" style="display: none;">
-					<div class="dash-block-2 topgap10" style="padding: 0;">
-						<div class="row" style="border-bottom: 1px solid #eaeaea;padding: 20px;margin:0">
-							<div class="col s2 m2 font-15 font-weight-500 label-grey">Date</div>
-							<div class="col s6 m6 font-15 font-weight-500 label-grey">Description</div>
-							<div class="col s2 m2 font-15 font-weight-500 label-grey">Status</div>
-							<div class="col s2 m2 font-15 font-weight-500 label-grey">Amount</div>
-						</div>
-						<div class="row" style="padding: 20px;">
-							<div class="col s2 m2 font-14 label-grey">10 Jun 2017</div>
-							<div class="col s6 m6 font-14 label-grey">Received 20 ETH</div>
-							<div class="col s2 m2 font-14 label-grey">Unconfirmed</div>
-							<div class="col s2 m2 font-14 label-grey">20 ETH</div>
-						</div>
-					</div>
-				</div>
+				<div class="col s1">&nbsp;</div>
 			</div>
 		</div>
-		<div class="col s2 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s4 m3 hide-on-small-only signup-text-block" style="margin-top: 180px">
+			<div class="font-24 font-weight-600" style="letter-spacing: 0.4px;">CONTRIBUTE NOW</div>
+			<div class="topgap15">For development and technical augmentations.</div>
+			<div class="topgap15">
+				Minimum fund expected for the project  $5 million , once reached no more contribution will be accepted.
+			</div>
+			<div class="topgap15">
+				Expected unclaimed bitcoin Dollar will be around 8 million.
+			</div>
+			<div class="topgap15">Unclaimed BTD will be distributed among developers, early backer and contributors.</div>
+			<div class="topgap15">To Check your contribution</div>
+			<div>Please Click Here</div>
+			<div class="topgap15">A transaction may take up to 1-2 hours to be available.</div>
+			<div>Please keep a screenshot of your transaction ID for future references.</div>
+		</div>
+		<div class="col s4 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 topgap60">&nbsp;</div>	
 	</div>
 </div>

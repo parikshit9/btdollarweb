@@ -68,6 +68,9 @@ html,body {
 }
 
 /*custom margin*/
+.topgap80{
+	margin-top: 80px;
+}
 .topgap60{
 	margin-top: 60px;
 }

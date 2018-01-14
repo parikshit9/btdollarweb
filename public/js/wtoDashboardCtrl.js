@@ -88,12 +88,12 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		}
 	}
 	
-	if (!$window.localStorage.wtoUserData) {
-		$state.go('home');
-	}else{
-		$scope.userData = JSON.parse($window.localStorage.wtoUserData);
-		$scope.fetchData();
-	}
+	// if (!$window.localStorage.wtoUserData) {
+	// 	$state.go('home');
+	// }else{
+	// 	$scope.userData = JSON.parse($window.localStorage.wtoUserData);
+	// 	$scope.fetchData();
+	// }
 
 	// console.log($scope.userData);
 
