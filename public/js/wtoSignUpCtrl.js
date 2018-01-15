@@ -6,7 +6,7 @@ worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $t
 
 	$scope.register = function(){
 		var hash = md5($scope.registerObj.userPassword);
-		var postObj = $scope.registerObj.userEmail + "|" + hash;
+		var postObj = JSON.stringify($scope.registerObj.userEmail + "|" + hash);
 		// delete postObj.pass;
 		// if ($stateParams.token) {
 		// 	postObj.userReferralToken = $stateParams.token;
@@ -22,14 +22,16 @@ worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $t
 		}).then(success,error);
 
 		function success(res){
+			var x = res.data;
 			console.log("res",res);
-			if (res.data.success) {
+			var resp = JSON.parse(x);
+			if (resp.statusCode == 1) {
 				$state.go('verify');
-			}else if(res.data.error == "verify email"){
+			}else if(resp.statusCode != 1){
 				Materialize.toast("You are already registered, Please verify email", 3000);
 				$scope.registerObj = {};
 			}else{
-				Materialize.toast(res.data.error, 3000);
+				Materialize.toast(resp.statusCode !=1, 3000);
 				$scope.registerObj = {};
 			}
 		}
