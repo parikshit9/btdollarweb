@@ -4,22 +4,22 @@ worldTourApp.controller('wtoLogInCtrl', function($scope, $rootScope, $state, $ti
 	$scope.loginObj = {};
 
 	$scope.login = function(){
-		var postObj = angular.copy($scope.loginObj);
-
+		var random = Math.random().toString().slice(2,12);
+		var hash = md5(md5($scope.loginObj.userPassword) + random);
+		var postObj = JSON.stringify($scope.loginObj.userEmail + "|" + hash + "|" + random + "|" + "0.0.0.0");
+		console.log(postObj);
 		// $http.post('http://api.worldtourism.io:8080/tourcoins/loginAuth',postObj).then(success,error);
-		$http.post('https://api.worldtourism.io/tourcoins/loginAuth',postObj).then(success,error);
+		$http.post('http://52.66.179.247/Coin_Api/UserAccess.svc/UserLogin',postObj).then(success,error);
 
 		function success(res){
-			// console.log(res);
-			if (res.data.success =='success') {
+			var x = res.data;
+            console.log("res",res);
+            var resp = JSON.parse(x);
+			if (resp.statusCode == 1) {
 				$window.localStorage.wtoUserData = JSON.stringify(res.data.userData);
-				if (new Date().setHours(0,0,0,0) == new Date('2017-12-01').setHours(0,0,0,0) || new Date().setHours(0,0,0,0) > new Date('2017-12-01').setHours(0,0,0,0)) {
-					$state.go('dashboard_1');	
-				}else{
-					$state.go('dashboard');
-				}
-			}else if(res.data.error){
-				$scope.loginError = res.data.error;
+				$state.go('dashboard');
+			}else if(resp.statusCode != 1){
+				$scope.loginError = resp.Message;
 			}
 		}
 

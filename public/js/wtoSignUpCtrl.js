@@ -31,7 +31,7 @@ worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $t
 				Materialize.toast("You are already registered, Please verify email", 3000);
 				$scope.registerObj = {};
 			}else{
-				Materialize.toast(resp.statusCode !=1, 3000);
+				Materialize.toast(resp.Message, 3000);
 				$scope.registerObj = {};
 			}
 		}
