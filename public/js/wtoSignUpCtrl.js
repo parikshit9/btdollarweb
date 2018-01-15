@@ -5,21 +5,22 @@ worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $t
 	$scope.registerObj = {};
 
 	$scope.register = function(){
-		var postObj = angular.copy($scope.registerObj);
-		delete postObj.pass;
-		if ($stateParams.token) {
-			postObj.userReferralToken = $stateParams.token;
-		}else{
-			postObj.userReferralToken = "";
-		}
+		var hash = md5($scope.registerObj.userPassword);
+		var postObj = $scope.registerObj.userEmail + "|" + hash;
+		// delete postObj.pass;
+		// if ($stateParams.token) {
+		// 	postObj.userReferralToken = $stateParams.token;
+		// }else{
+		// 	postObj.userReferralToken = "";
+		// }
 
-		// console.log(postObj);
+		console.log(postObj);
 
 		// $http.post('http://api.worldtourism.io:8080/tourcoins/createAccount',postObj).then(success,error);
-		$http.post('examplefor:http://52.66.179.247/Coin_Api/UserAccess.svc/UserRegistration',postObj).then(success,error);
+		$http.post('http://52.66.179.247/Coin_Api/UserAccess.svc/UserRegistration',postObj).then(success,error);
 
 		function success(res){
-			// console.log("res",res);
+			console.log("res",res);
 			if (res.data.success) {
 				$state.go('verify');
 			}else if(res.data.error == "verify email"){

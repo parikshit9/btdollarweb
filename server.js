@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 
-var port = process.env.PORT || 9999;
+var port = process.env.PORT || 80;
 
 app.use(bodyParser.json());
 
