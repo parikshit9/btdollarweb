@@ -97,6 +97,16 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
             templateUrl: "/views/ecoSystem.html",
             controller: "wtoController"
         })
+        .state("success", {
+            url: "/success",
+            templateUrl: "/views/success.html",
+            controller: "wtoController"
+        })
+        .state("failure", {
+            url: "/failure",
+            templateUrl: "/views/failure.html",
+            controller: "wtoController"
+        })
     // $locationProvider.html5Mode(true);
 });
 
