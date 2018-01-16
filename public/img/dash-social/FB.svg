@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="35px" viewBox="0 0 70 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>FB</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="TEZOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard---Contribution-2" transform="translate(-399.000000, -1601.000000)">
+            <g id="Socials" transform="translate(399.000000, 1601.000000)">
+                <g id="FB">
+                    <rect id="Button" stroke="#6C6B6F" x="0.5" y="0.5" width="69" height="34"></rect>
+                    <path d="M35.6875,13.280303 L35.6875,14.6856061 L38.5,14.6856061 L38.030303,17.5 L35.6875,17.5 L35.6875,25 L32.875,25 L32.875,17.5 L31,17.5 L31,14.6875 L32.875,14.6875 L32.875,13.282197 C32.875,11.4715909 34.3465909,10 36.155303,10 L38.5,10 L38.5,12.8125 L36.155303,12.8125 C35.9015152,12.8125 35.6875,13.0265152 35.6875,13.280303 Z" id="Facebook" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -12,19 +12,19 @@
 							<form name="signup">
 								<div class="input-field">
 									<input placeholder="Email" id="email" type="email" class="validate" style="margin-bottom: 0;color: #fff;" ng-model="registerObj.userEmail" required>
-									<label data-error="Please enter a valid email!" class="active" for="email" style="font-size: 10px;top:10px;">EMAIL</label>
+									<label data-error="Please enter a valid email!" class="active" for="email" style="font-size: 14px;top:10px;">EMAIL</label>
 								</div>
 
 								<div class="input-field topgap40">
 									<input data-error="wrong" placeholder="Password" id="password" type="password" class="validate" style="margin-bottom: 0;color: #fff;" ng-model="registerObj.userPassword" required>
-									<label class="active font-10" style="font-size: 10px;top:10px;" for="password">PASSWORD</label>
+									<label class="active font-14" style="font-size: 14px;top:10px;" for="password">PASSWORD</label>
 								</div>
 
 								<div class="input-field topgap40">
 									<input data-error="wrong" placeholder="Confirm Password" id="confirm_password" type="password" class="validate" style="margin-bottom: 0;color: #fff;" ng-model="registerObj.pass" ng-change="comparePass()" ng-pattern="registerObj.userPassword" ng-focus="passwordCheck()" required>
-									<label class="active font-10" style="font-size: 10px;top:10px;" for="confirm_password">CONFIRM PASSWORD</label>
-									<div class="font-10 topgap6" style="color: #ff6565">{{matchError}}</div>
-									<div class="font-10 topgap6" style="color: #ff6565">{{pwdErrMsg}}</div>
+									<label class="active font-14" style="font-size: 14px;top:10px;" for="confirm_password">CONFIRM PASSWORD</label>
+									<div class="font-14 topgap6" style="color: #ff6565">{{matchError}}</div>
+									<div class="font-14 topgap6" style="color: #ff6565">{{pwdErrMsg}}</div>
 								</div>
 
 								<div class="topgap20 disable-class relative">
@@ -39,15 +39,19 @@
 						<div class="col s1">&nbsp;</div>
 					</div>
 				</div>
-				<div class="col s4 m1 hide-on-small-only">&nbsp;</div>
-				<div class="col s4 m3 hide-on-small-only signup-text-block" style="margin-top: 180px">
-					<div>Put a strong but memorable password that you haven’t used anywhere to secure your account.</div>
-					<div class="topgap15">
-						Password should be atleast 8 characters, Must contain a combination of both upper-case and lower-case letters, one number and a special character
-					</div>
-					<div>eg: Coin@123</div>
-					<div>
-						If you are not sure you can remember a strong password, you’re probably better off writing it down and storing it in a secure and secret location than you are packing a weak password or reusing an old one.
+				<div class="col s4 m4 hide-on-small-only signup-text-block" style="margin-top: 180px">
+					<div class="row">
+						<div class="col s1 m1">&nbsp;</div>
+						<div class="col s11 m11">
+							<div>Put a strong but memorable password that you haven’t used anywhere to secure your account.</div>
+							<div class="topgap15">
+								Password should be atleast 8 characters, Must contain a combination of both upper-case and lower-case letters, one number and a special character
+							</div>
+							<div>eg: Coin@123</div>
+							<div>
+								If you are not sure you can remember a strong password, you’re probably better off writing it down and storing it in a secure and secret location than you are packing a weak password or reusing an old one.
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col s4 m1 hide-on-small-only">&nbsp;</div>

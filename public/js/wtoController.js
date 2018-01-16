@@ -144,29 +144,49 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	}
     }
 
-    // if ($state.current.name == 'resetPassword') {
-    // 	console.log($stateParams.token);
-    // }
+    if ($state.current.name == 'resetPassword') {
+    	// console.log($stateParams.token);
+        var apiUrl = "http://52.66.179.247/Coin_Api/UserAccess.svc/VerifyEMail/" + $stateParams.token;
+        
+        $http.get(apiUrl).then(success,error);
+
+        function success(res){
+            var x = res.data;
+            console.log("res",res);
+            var resp = JSON.parse(x);
+            if (resp.statusCode == 1) {
+                Materialize.toast(resp.Message, 3000);
+            }else if(resp.statusCode != 1){
+                Materialize.toast(resp.Message, 3000);
+            }
+        }
+
+        function error(err){
+            console.log(err);
+        }
+    }
 
     $scope.reset = {};
 
     $scope.resetPassword = function(){
-    	var postObj = {};
-    	postObj.forgotPwdToken = $stateParams.token;
-    	postObj.newPassword = $scope.reset.password;
+    	var postObj = JSON.stringify($stateParams.token + "|" + md5($scope.reset.password));
+    	// postObj.forgotPwdToken = $stateParams.token;
+    	// postObj.newPassword = $scope.reset.password;
 
     	// console.log(postObj);
 
         // $http.post('http://api.worldtourism.io:8080/tourcoins/resetPassword',postObj).then(success,error);
-        $http.post('https://api.worldtourism.io/tourcoins/resetPassword',postObj).then(success,error);
+        $http.post('http://52.66.179.247/Coin_Api/UserAccess.svc/ChangePassword',postObj).then(success,error);
 
         function success(res){
-            // console.log(res);
-            if (res.data.success) {
-                Materialize.toast(res.data.success, 3000);
+            var x = res.data;
+            console.log("res",res);
+            var resp = JSON.parse(x);
+            if (resp.statusCode == 1) {
+                Materialize.toast(resp.Message, 3000);
                 $state.go('passwordChanged');
-            }else if(res.data.error){
-                Materialize.toast(res.data.error, 3000);
+            }else if(resp.statusCode != 1){
+                Materialize.toast(resp.Message, 3000);
             }
         }
 

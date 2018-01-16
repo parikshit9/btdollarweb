@@ -1116,7 +1116,7 @@ input:focus{
 	max-width: 100%!important;
 }
 .toast{
-	background-color: #ffa001!important;
+	background-color: #7ed321!important;
 	font-weight: normal!important;
 	color: #fff!important;
 	justify-content: center!important;
@@ -1212,7 +1212,7 @@ input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:aft
 		margin-top: 100px;
 	}
 	.wto-home-bg{
-		min-height: 100px!important;
+		min-height: 100vh!important;
 	}
 	.wto-presell{
 		margin-top: 100px;
