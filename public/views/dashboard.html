@@ -21,33 +21,38 @@
 					<div class="topgap80 dash-box relative">
 						<div class="row" style="margin-top: 65px;">
 							<div class="col s4">
-								<div class="money-container">100</div>
-								<div class="curreny-container">BITCOIN DOLLAR (BTD)</div>
+								<div class="money-container">
+									<input type="number" ng-model="btd" ng-change="changeBTD()" name="" style="margin-bottom: 0;font-size: 24px;">
+								</div>
+								<div class="curreny-container hide-on-small-only">BITCOIN DOLLAR (BTD)</div>
+								<div class="curreny-container show-on-small">BTD</div>
 							</div>
 							<div class="col s4 text-center">
 								<img src="/img/equal.svg" style="margin-top: 35px;">
 							</div>
 							<div class="col s4">
-								<div class="money-container">$ 200.00</div>
+								<div class="money-container">
+									<input type="number" ng-model="usd" ng-change="changeUSD()" name="" style="margin-bottom: 0;font-size: 24px;">
+								</div>
 								<div class="curreny-container">USD</div>
 							</div>
 						</div>
 						<div class="bonus-container" style="top: -30px;">
 							<span class="inline-block">
 								<div class="inline-block font-12 text-center" style="letter-spacing: 0.2px;color: rgba(255,255,255,0.75);">CURRENT BONUS</div>
-								<div class="font-24 font-weight-600 font-white text-center" style="letter-spacing: 0.4px;">20%</div>
+								<div class="font-24 font-weight-600 font-white text-center" style="letter-spacing: 0.4px;">{{bonus}}%</div>
 							</span>
 						</div>
 						<div class="bonus-container" style="bottom: -30px;">
 							<span class="inline-block">
 								<div class="inline-block font-12 text-center" style="letter-spacing: 0.2px;color: rgba(255,255,255,0.75);">BTD TOTAL</div>
-								<div class="font-24 font-weight-600 font-white text-center" style="letter-spacing: 0.4px;">120</div>
+								<div class="font-24 font-weight-600 font-white text-center" style="letter-spacing: 0.4px;text-overflow: ellipsis;max-width: 150px;overflow: hidden;">{{btd_total}}</div>
 							</span>
 						</div>
 					</div>
 					<div style="margin-top: 90px;">
 						<div class="font-16 font-weight-600 font-white text-center" style="letter-spacing: 0.3px;">CONTRIBUTION OPTIONS</div>
-						<div class="row topgap25">
+						<div class="row topgap25 hide-on-small-only">
 							<div class="col s6 contri-btn" style="width: 48%;margin-right: 24px;">
 								<img src="/img/contribution/btc.svg" style="vertical-align: bottom;">
 								<span class="inline-block leftgap12">BITCOIN</span>
@@ -58,7 +63,7 @@
 							</div>
 						</div>
 						<div class="row topgap20">
-							<div class="col s6 text-center" style="width: 48%;margin-right: 24px;">
+							<div class="col s12 text-center no-padding">
 								<!-- <img src="/img/contribution/coinpayments.svg" style="vertical-align: middle;margin-top: -6px;">
 								<span class="inline-block leftgap12">ALTCOINS VIA COINPAYMENTS</span> -->
 								<form action="https://www.coinpayments.net/index.php" method="post">
@@ -75,13 +80,13 @@
 									<input type="hidden" name="cancel_url" value="http://bitcoindollar.io/#!/failure">
 									<input type="hidden" name="allow_extra" value="0">
 									<input type="hidden" name="email" value="{{userData.UserEMail}}">
-									<input type="image" src="https://www.coinpayments.net/images/pub/buynow-wide-blue.png" alt="Buy Now with CoinPayments.net">
+									<input type="image" src="/img/coinpayments-btn.png" alt="Buy Now with CoinPayments.net" width="100%">
 								</form>
 							</div>
-							<div class="col s6 contri-btn" style="width: 48%;">
+							<!-- <div class="col s6 contri-btn" style="width: 48%;">
 								<img src="/img/contribution/paypal.svg" style="vertical-align: sub;">
 								<span class="inline-block leftgap12">FIAT MONEY VIA PAYPAL</span>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -105,19 +110,19 @@
 			</div>
 		</div>
 		<div class="col s4 m3 hide-on-small-only signup-text-block" style="margin-top: 180px">
-			<div class="font-24 font-weight-600" style="letter-spacing: 0.4px;">CONTRIBUTE NOW</div>
-			<div class="topgap15">For development and technical augmentations.</div>
-			<div class="topgap15">
+			<div class="font-24 font-weight-600" style="letter-spacing: 0.4px;padding: 0 8px;">CONTRIBUTE NOW</div>
+			<div class="topgap15" style="padding: 0 8px;">For development and technical augmentations.</div>
+			<div class="topgap15" style="padding: 0 8px;">
 				Minimum fund expected for the project  $5 million , once reached no more contribution will be accepted.
 			</div>
-			<div class="topgap15">
+			<div class="topgap15" style="padding: 0 8px;">
 				Expected unclaimed bitcoin Dollar will be around 8 million.
 			</div>
-			<div class="topgap15">Unclaimed BTD will be distributed among developers, early backer and contributors.</div>
-			<div class="topgap15">To Check your contribution</div>
-			<div>Please Click Here</div>
-			<div class="topgap15">A transaction may take up to 1-2 hours to be available.</div>
-			<div>Please keep a screenshot of your transaction ID for future references.</div>
+			<div class="topgap15" style="padding: 0 8px;">Unclaimed BTD will be distributed among developers, early backer and contributors.</div>
+			<div class="topgap15" style="padding: 0 8px;">To Check your contribution</div>
+			<div style="padding: 0 8px;>Please Click Here</div>
+			<div class="topgap15" style="padding: 0 8px;">A transaction may take up to 1-2 hours to be available.</div>
+			<div style="background-color: rgba(216,216,216,0.1);padding: 8px;">Please keep a screenshot of your transaction ID for future references.</div>
 		</div>
 		<div class="col s4 m1 hide-on-small-only">&nbsp;</div>
 		<div class="col s12 topgap60">&nbsp;</div>	

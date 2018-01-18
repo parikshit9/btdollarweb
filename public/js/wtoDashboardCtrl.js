@@ -99,4 +99,19 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 	$scope.tabChanger = function(name){
 		$scope.tab = name;
 	}
+
+	$scope.bonus = 20;
+	$scope.btd_total = 120;
+	$scope.btd = 100;
+	$scope.usd = 200;
+
+	$scope.changeBTD = function(){
+		$scope.usd = $scope.btd * 2;
+		$scope.btd_total = $scope.btd + ($scope.btd*($scope.bonus/100)); 
+	}
+
+	$scope.changeUSD = function(){
+		$scope.btd = $scope.usd/2;
+		$scope.btd_total = $scope.btd + ($scope.btd*($scope.bonus/100)); 
+	}
 });

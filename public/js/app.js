@@ -1,6 +1,6 @@
 'use strict';
 
-var worldTourApp = angular.module('worldTourApp', ['ui.router', 'ngRoute', 'chart.js']);
+var worldTourApp = angular.module('worldTourApp', ['ui.router', 'ngRoute', 'chart.js', '720kb.tooltips']);
 
 worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
     // $locationProvider.html5Mode({
@@ -85,11 +85,6 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
         .state("dashboard", {
             url: "/dashboard",
             templateUrl: "/views/dashboard.html",
-            controller: "wtoDashboardCtrl"
-        })
-        .state("dashboard_1", {
-            url: "/dashboard_1",
-            templateUrl: "/views/dashboard-1.html",
             controller: "wtoDashboardCtrl"
         })
         .state("ecosystem", {
