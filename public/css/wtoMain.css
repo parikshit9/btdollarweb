@@ -297,8 +297,8 @@ html,body {
 	/*text-shadow: 0 0 10px #0b1b33;*/
 }
 .logo{
-	width: 78px;
-	height: 77px;
+	width: 158px;
+	height: 158px;
 	object-fit: contain;
 	margin: 0 20px 0 20px;
     display: inline-block;
@@ -314,7 +314,7 @@ html,body {
 	left: 50%;
 	transform: translate(-50%,-50%);*/
 	font-size: 30px;
-	font-weight: 300;
+	/*font-weight: 300;*/
 	font-style: normal;
 	font-stretch: normal;
 	line-height: 1.5;
@@ -324,7 +324,7 @@ html,body {
 	/*width: 60%;*/
 }
 .block-1-margin{
-	margin-top: 190px;
+	margin-top: 140px;
 }
 .wto-presell{
 	font-size: 27px;
@@ -788,7 +788,7 @@ input:focus{
 	float: right;
 }
 .wto-anchor{
-	padding: 14px 14px;
+	padding: 20px 20px;
 	line-height: initial;
 	font-size: 14px;
 	font-weight: normal;
@@ -797,8 +797,6 @@ input:focus{
 	line-height: normal;
 	letter-spacing: 0.4px;
 	text-align: center;
-	color: #ffffff;
-	text-align: center;
 	color: #9b9b9b;
 	background-color: transparent!important;
 	background-image: none!important;
@@ -806,6 +804,27 @@ input:focus{
 }
 .wto-anchor:hover{
 	color: #ff9f00;
+}
+.login-btn-header{
+	padding: 10px 20px;
+	line-height: initial;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.4px;
+	text-align: center;
+	color: #9b9b9b;
+	background-color: transparent!important;
+	background-image: none!important;
+	border: 1px solid #9b9b9b;
+	border-radius: 2px;
+	margin: 10px 20px;
+}
+.login-btn-header:hover{
+	color: #ff9f00;
+	border-color: #ff9f00;
 }
 .anchor-active{
 	border-color: #ff9f00;

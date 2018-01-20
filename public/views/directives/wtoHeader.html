@@ -53,7 +53,11 @@
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'faq' ? 'anchor-active':''}}" ui-sref="faq">FAQs</a>
 					</li>
 
-					<li ng-if="state.current.name == 'dashboard' || state.current.name == 'dashboard_1'"><a class="dropdown-button wto-anchor" style="border-bottom:none!important" href="#!" data-activates="dropdown1">MY ACCOUNT<i class="material-icons log-icon right">arrow_drop_down</i></a></li>
+					<li ng-if="state.current.name != 'dashboard'">
+						<a class="login-btn-header" ui-sref="login">LOGIN/SIGNUP</a>
+					</li>
+
+					<li ng-if="state.current.name == 'dashboard'"><a class="dropdown-button wto-anchor" style="border-bottom:none!important" href="#!" data-activates="dropdown1">MY ACCOUNT<i class="material-icons log-icon right">arrow_drop_down</i></a></li>
 				</ul>
 
 				<!-- <ul class="side-nav" id="mobile-nav">
