@@ -47,8 +47,8 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 	function fetchTransactions(){
 		var url = "https://api.bitcoindollar.io/UserAccess.svc/UserTransactions";
 		console.log($scope.userData);
-		// var postObj = $scope.userData.UserID;
-		var postObj = "17";
+		var postObj = $scope.userData.UserID;
+		// var postObj = "17";
 		$http.post(url,postObj).then(success,error);
 
 		function success(res){
