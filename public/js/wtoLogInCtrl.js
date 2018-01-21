@@ -9,7 +9,7 @@ worldTourApp.controller('wtoLogInCtrl', function($scope, $rootScope, $state, $ti
 		var postObj = JSON.stringify($scope.loginObj.userEmail + "|" + hash + "|" + random + "|" + "0.0.0.0");
 		console.log(postObj);
 		// $http.post('http://api.worldtourism.io:8080/tourcoins/loginAuth',postObj).then(success,error);
-		$http.post('http://52.66.179.247/Coin_Api/UserAccess.svc/UserLogin',postObj).then(success,error);
+		$http.post('https://api.bitcoindollar.io/UserAccess.svc/UserLogin',postObj).then(success,error);
 
 		function success(res){
 			var x = res.data;

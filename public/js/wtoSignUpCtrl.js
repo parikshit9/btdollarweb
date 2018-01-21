@@ -17,7 +17,7 @@ worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $t
 		console.log(postObj);
 
 		// $http.post('http://api.worldtourism.io:8080/tourcoins/createAccount',postObj).then(success,error);
-		$http.post('http://52.66.179.247/Coin_Api/UserAccess.svc/UserRegistration',postObj,{
+		$http.post('https://api.bitcoindollar.io/UserAccess.svc/UserRegistration',postObj,{
 			headers: { 'Content-Type': 'application/json' }
 		}).then(success,error);
 

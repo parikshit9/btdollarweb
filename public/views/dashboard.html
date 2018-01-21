@@ -1,8 +1,16 @@
 <div class="wto-container">
 	<div class="row" style="margin-bottom: 0;background-color: #464036">
 		<div class="col s4 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m7" style="margin-top: 120px">
-			<div class="btd-login-title">CROWDFUNDING</div>
+		<div class="col s12 m7" style="margin-top: 120px" ng-if="tab=='crowd'">
+			<div>
+				<span class="btd-login-title">CROWDFUNDING</span>
+				<span class="dash-btn cursor" ng-click="tabChanger('dash')">
+					GO TO DASHBOARD
+					<span class="inside-btn-block">
+						<img src="/img/arrow-white.svg">
+					</span>
+				</span>
+			</div>
 			<div class="row btd-signin-bg topgap10">
 				<div class="col s1">&nbsp;</div>
 				<div class="col s10" style="padding: 54px 0;">
@@ -109,7 +117,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col s4 m3 hide-on-small-only signup-text-block" style="margin-top: 180px">
+		<div class="col s4 m3 hide-on-small-only signup-text-block" ng-if="tab=='crowd'" style="margin-top: 180px">
 			<div class="font-24 font-weight-600" style="letter-spacing: 0.4px;padding: 0 8px;">CONTRIBUTE NOW</div>
 			<div class="topgap15" style="padding: 0 8px;">For development and technical augmentations.</div>
 			<div class="topgap15" style="padding: 0 8px;">
@@ -124,6 +132,50 @@
 			<div class="topgap15" style="padding: 0 8px;">A transaction may take up to 1-2 hours to be available.</div>
 			<div style="background-color: rgba(216,216,216,0.1);padding: 8px;">Please keep a screenshot of your transaction ID for future references.</div>
 		</div>
+
+		<div class="col s12 m10" style="margin-top: 120px" ng-if="tab=='dash'">
+			<div>
+				<span class="btd-login-title">DASHBOARD</span>
+				<span class="dash-btn cursor" ng-click="tabChanger('crowd')" style="width: 260px;">
+					GO TO CROWDFUNDING
+					<span class="inside-btn-block">
+						<img src="/img/arrow-white.svg">
+					</span>
+				</span>
+			</div>
+			<div class="row btd-signin-bg topgap10">
+				<div class="col s1">&nbsp;</div>
+				<div class="col s10" style="padding: 39px 0;">
+					<div class="current-balance">CURRENT BALANCE</div>
+					<div class="user-balance">{{transactionDetails.UserBalance}} BTD</div>
+				</div>
+				<div class="col s1">&nbsp;</div>
+			</div>
+			<div class="row">
+				<div class="col s12 transaction-history">
+					TRANSACTION HISTORY
+				</div>
+			</div>
+			<div class="row btd-signin-bg topgap10">
+				<div class="col s12 dash-row-1">
+					<div class="row" style="margin-bottom: 0;">
+						<div class="col s2">Date</div>
+						<div class="col s6">Description</div>
+						<div class="col s2">Amount</div>
+						<div class="col s2">Status</div>
+					</div>
+				</div>
+				<div class="col s12" ng-repeat="data in transactionDetails.transactions" ng-class-odd="'dash-row-2'" ng-class-even="'dash-row-1'">
+					<div class="row" style="margin-bottom: 0;">
+						<div class="col s2">{{data.Transdate}}</div>
+						<div class="col s6">txn id : {{data.TransactionID}}</div>
+						<div class="col s2">{{data.amount}} {{data.Currency}}</div>
+						<div class="col s2">{{data.Status}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="col s4 m1 hide-on-small-only">&nbsp;</div>
 		<div class="col s12 topgap60">&nbsp;</div>	
 	</div>

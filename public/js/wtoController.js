@@ -124,7 +124,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     $scope.sendResetLink = function(){
     	var postObj = JSON.stringify($scope.forgot.mail);
     	// $http.post('http://api.worldtourism.io:8080/tourcoins/forgotPassword',postObj).then(success,error);
-    	$http.post('http://52.66.179.247/Coin_Api/UserAccess.svc/ForgotPassword',postObj).then(success,error);
+    	$http.post('https://api.bitcoindollar.io/UserAccess.svc/ForgotPassword',postObj).then(success,error);
 
     	function success(res){
             var x = res.data;
@@ -146,7 +146,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 
     if ($state.current.name == 'resetPassword') {
     	// console.log($stateParams.token);
-        var apiUrl = "http://52.66.179.247/Coin_Api/UserAccess.svc/VerifyEMail/" + $stateParams.token;
+        var apiUrl = "https://api.bitcoindollar.io/UserAccess.svc/VerifyEMail/" + $stateParams.token;
         
         $http.get(apiUrl).then(success,error);
 
@@ -176,7 +176,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	// console.log(postObj);
 
         // $http.post('http://api.worldtourism.io:8080/tourcoins/resetPassword',postObj).then(success,error);
-        $http.post('http://52.66.179.247/Coin_Api/UserAccess.svc/ChangePassword',postObj).then(success,error);
+        $http.post('https://api.bitcoindollar.io/UserAccess.svc/ChangePassword',postObj).then(success,error);
 
         function success(res){
             var x = res.data;
@@ -227,7 +227,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
         var postObj = JSON.stringify($scope.contact.userFullName + "|" + $scope.contact.userEmailId + "|" + $scope.contact.userMessage);
         console.log(postObj);
         // $http.post('http://api.worldtourism.io:8080/tourcoins/contactUs',postObj).then(success,error);
-        $http.post('http://52.66.179.247/Coin_Api/UserAccess.svc/ContactUs',postObj).then(success,error);
+        $http.post('https://api.bitcoindollar.io/UserAccess.svc/ContactUs',postObj).then(success,error);
 
         function success(res){
             var x = res.data;

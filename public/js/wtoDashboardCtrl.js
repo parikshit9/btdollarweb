@@ -22,39 +22,6 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		// 	$('.wto-fixed-nav').find('a[href="#'+$(this).attr('id')+'"]').parent().removeClass('active');
 		// });
     });
-
-	$scope.fetchData = function(){
-		var postObj = {};
-		postObj.userId = $scope.userData.userId;
-
-		// console.log(postObj);
-
-		// $http.post('http://api.worldtourism.io:8080/tourcoins/dataOnDashboard',postObj).then(success,error);
-		$http.post('https://api.worldtourism.io/tourcoins/dataOnDashboard',postObj).then(success,error);
-
-		function success(res){
-			console.log("res",res.data.data);
-			if (res.data.data) {
-				$scope.dashData = res.data.data;
-				if ($scope.dashData.userWallet.bitcoin.walletId == '') {
-					$scope.btcFlag = false;
-				}else{
-					$scope.btcFlag = true;
-				}
-				if ($scope.dashData.userWallet.eherium.walletId == '') {
-					$scope.ethFlag = false;
-				}else{
-					$scope.ethFlag = true;
-				}
-				$scope.editBtcMode = false;
-				$scope.editEthMode = false;
-			}
-		}
-
-		function error(err){
-			console.log(err);
-		}
-	}
 	
 	if (!$window.localStorage.wtoUserData) {
 		$state.go('home');
@@ -78,12 +45,16 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 	}
 
 	function fetchTransactions(){
-		var url = "https://api.worldtourism.io/tourcoins/transactionDetails/" + $scope.userData.userId;
-		$http.get(url).then(success,error);
+		var url = "https://api.bitcoindollar.io/UserAccess.svc/UserTransactions";
+		console.log($scope.userData);
+		// var postObj = $scope.userData.UserID;
+		var postObj = "17";
+		$http.post(url,postObj).then(success,error);
 
 		function success(res){
 			// console.log(res);
-			$scope.transactionDetails = res.data.response;
+			$scope.transactionDetails = JSON.parse(res.data);
+			console.log($scope.transactionDetails);
 			$timeout(function(){
 				fetchTransactions();
 			},50000);
@@ -95,7 +66,7 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 	}
 	fetchTransactions();
 
-	$scope.tab = "dash";
+	$scope.tab = "crowd";
 	$scope.tabChanger = function(name){
 		$scope.tab = name;
 	}

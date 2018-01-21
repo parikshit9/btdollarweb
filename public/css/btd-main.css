@@ -374,6 +374,96 @@ input[type=number]::-webkit-outer-spin-button {
 	display: flex;
 	align-items: center;
 }
+.dash-btn{
+	width: 235px;
+	height: 40px;
+	opacity: 0.5;
+	border-radius: 3px;
+	border: solid 1px #979797;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.2px;
+	display: inline-block;
+	float: right;
+	padding: 11px 16px;
+	position: relative;
+}
+.inside-btn-block{
+	width: 50px;
+	height: 28px;
+	/*opacity: 0.5;*/
+	border-radius: 3px;
+	background-color: rgba(30,30,30,0.5);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 6px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+.inside-btn-block img{
+	transform: rotateZ(180deg);
+	width: 18px;
+}
+.current-balance{
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.75;
+	letter-spacing: 0.3px;
+	text-align: left;
+	color: #ffffff;
+}
+.user-balance{
+	font-size: 48px;
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.2px;
+	text-align: left;
+	color: #ffffff;
+}
+.transaction-history{
+	font-size: 18px;
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.56;
+	letter-spacing: 0.3px;
+	text-align: left;
+	color: #ffffff;
+}
+.dash-row-1{
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.3px;
+	text-align: left;
+	color: #ffffff;
+	padding: 15px!important;
+}
+.dash-row-2{
+	background-color: #3e3930;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.3px;
+	text-align: left;
+	color: #ffffff;
+	padding: 15px!important;
+}
 /*(for small screen size less then 480px)*/
 @media only screen and (max-width: 480px){
 	.feature-icon-block{
