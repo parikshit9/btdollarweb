@@ -2,7 +2,7 @@
 	<div class="row" style="margin-bottom: 0;">
 		<nav scroll class="wto-fixed-nav {{boolChangeClass?'wto-white-nav':'wto-trans-nav'}}">
 			<div class="col s12">
-				<!-- <a href="#" data-activates="mobile-nav" class="button-collapse" style="color: #9b9b9b;margin: 0;"><i class="material-icons">menu</i></a> -->
+				<a href="#" data-activates="mobile-nav" class="button-collapse" style="color: #9b9b9b;margin: 0;float: right;"><i class="material-icons">menu</i></a>
 				<img src="/img/logo-nav-w.svg" class="topgap6 {{boolChangeClass?'hidden':''}}">
 				<img src="/img/logo-nav-y.svg" class="topgap6 {{boolChangeClass?'':'hidden'}}">
 				<ul class="wto-nav-ul right hide-on-small-only">
@@ -53,36 +53,32 @@
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'faq' ? 'anchor-active':''}}" ui-sref="faq">FAQs</a>
 					</li>
 
-					<li ng-if="state.current.name != 'dashboard'">
+					<li ng-if="!userData.isLoggedIn">
 						<a class="login-btn-header" ui-sref="login">LOGIN/SIGNUP</a>
 					</li>
 
-					<li ng-if="state.current.name == 'dashboard'"><a class="dropdown-button wto-anchor" style="border-bottom:none!important" href="#!" data-activates="dropdown1">MY ACCOUNT<i class="material-icons log-icon right">arrow_drop_down</i></a></li>
+					<li ng-if="userData.isLoggedIn"><a class="dropdown-button wto-anchor" style="border-bottom:none!important" href="#!" data-activates="dropdown1">MY ACCOUNT<i class="material-icons log-icon right">arrow_drop_down</i></a></li>
 				</ul>
 
-				<!-- <ul class="side-nav" id="mobile-nav">
-					<li ng-if="state.current.name == 'home'"><a href="#about">About Us</a></li>
-					<li ng-if="state.current.name == 'home'"><a href="#road-map">Road Map</a></li>
-					<li ng-if="state.current.name == 'vision'"><a href="#crew">Crew</a></li>
-					<li ng-if="state.current.name == 'home'"><a href="#rewards">Rewards</a></li>
-					<li ng-if="state.current.name == 'home'"><a href="#client">Clientele</a></li>
-
-					<li ng-if="state.current.name != 'home'"><a ui-sref="home">About Us</a></li>
-					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Road Map</a></li>
-					<li ng-if="state.current.name != 'vision'"><a ui-sref="Vision">Crew</a></li>
-					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Rewards</a></li>
-					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Clientele</a></li>
-
-					<li><a ui-sref="vision">Vision</a></li>
-					<li><a ui-sref="vision">Crew</a></li>
+				<ul class="side-nav" id="mobile-nav">
+					<li ng-if="state.current.name == 'home'"><a href="#about">FEATURES</a></li>
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">HOME</a></li>
+					<li ng-if="state.current.name == 'home'"><a href="#wallet">WALLETS</a></li>
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">WALLETS</a></li>
+					<li><a ui-sref="team">TEAM</a></li>
+					<li ng-if="state.current.name == 'home'"><a href="#exchanges">EXCHANGES</a></li>
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">EXCHANGES</a></li>
+					<li ng-if="state.current.name == 'home'"><a href="#road-map">ROAD MAP</a></li>
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">ROAD MAP</a></li>
+					<li><a ui-sref="ecosystem">MEDIA</a></li>
 					<li><a ui-sref="faq">FAQs</a></li>
-					<li><a href="https://s3.ap-south-1.amazonaws.com/tourcoin/whitepaper.pdf" target="_blank">WHITEPAPER</a></li>
-					<li ng-if="state.current.name == 'dashboard'"><a href="#!" ng-click="logout()">Logout</a></li>
+					<li ng-if="userData.isLoggedIn"><a href="#!" ng-click="logout()">Logout</a></li>
 				</ul>
 
 				<ul id="dropdown1" class="dropdown-content">
-					<li><a style="font-size: 12px;color: #05e7e6;" href="#!" ng-click="logout()">LOGOUT</a></li>
-				</ul> -->
+					<li><a style="font-size: 12px;color: #ffa001;" ui-sref="dashboard">CROWDFUNDING</a></li>
+					<li><a style="font-size: 12px;color: #ffa001;" ng-click="logout()">LOGOUT</a></li>
+				</ul>
 			</div>
 		</nav>		
 	</div>

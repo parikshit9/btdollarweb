@@ -1,5 +1,9 @@
 worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $timeout, $sce, $http, $window, $stateParams) {
 	$scope.state = $state;
+    if ($window.localStorage.wtoUserData) {
+        $scope.userData = JSON.parse($window.localStorage.wtoUserData);
+    }
+    console.log($scope.userData);
     wow = new WOW(
     {
         boxClass:     'wow',      // default
@@ -173,7 +177,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	// postObj.forgotPwdToken = $stateParams.token;
     	// postObj.newPassword = $scope.reset.password;
 
-    	// console.log(postObj);
+    	console.log(postObj);
 
         // $http.post('http://api.worldtourism.io:8080/tourcoins/resetPassword',postObj).then(success,error);
         $http.post('https://api.bitcoindollar.io/UserAccess.svc/ChangePassword',postObj).then(success,error);
@@ -245,5 +249,10 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
         function error(err){
             console.log(err);
         }
+    }
+
+    $scope.logout = function(){
+        delete $window.localStorage.wtoUserData;
+        $state.reload();
     }
 });

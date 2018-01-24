@@ -16,8 +16,9 @@ worldTourApp.controller('wtoLogInCtrl', function($scope, $rootScope, $state, $ti
             console.log("res",res);
             var resp = JSON.parse(x);
 			if (resp.statusCode == 1) {
+				resp.isLoggedIn = true;
 				$window.localStorage.wtoUserData = JSON.stringify(resp);
-				$state.go('dashboard');
+				$state.transitionTo('dashboard',{},{reload:true, inherit: true, notify: true});
 			}else if(resp.statusCode != 1){
 				$scope.loginError = resp.Message;
 			}

@@ -265,8 +265,8 @@
 	text-align: center;
 	color: #233d4e;
 	position: absolute;
-    left: 26px;
-    bottom: -40px;
+    left: 6%;
+    bottom: -18%;
 }
 .hidden{
 	display: none;
@@ -344,6 +344,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .flex-xs{
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 .feature-icon-img{
 	min-height: 100px;
