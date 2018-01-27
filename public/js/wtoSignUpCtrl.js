@@ -6,7 +6,7 @@ worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $t
 
 	$scope.register = function(){
 		var hash = md5($scope.registerObj.userPassword);
-		var postObj = JSON.stringify($scope.registerObj.userEmail + "|" + hash);
+		var postObj = JSON.stringify($scope.registerObj.userEmail + "|" + hash + "|" + "0");
 		// delete postObj.pass;
 		// if ($stateParams.token) {
 		// 	postObj.userReferralToken = $stateParams.token;
