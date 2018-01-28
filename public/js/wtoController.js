@@ -3,7 +3,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     if ($window.localStorage.wtoUserData) {
         $scope.userData = JSON.parse($window.localStorage.wtoUserData);
     }
-    console.log($scope.userData);
+    // console.log($scope.userData);
     wow = new WOW(
     {
         boxClass:     'wow',      // default
@@ -132,7 +132,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 
     	function success(res){
             var x = res.data;
-            console.log("res",res);
+            // console.log("res",res);
             var resp = JSON.parse(x);
     		if (resp.statusCode == 1) {
     			Materialize.toast(res.data.success, 3000);
@@ -156,7 +156,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 
         function success(res){
             var x = res.data;
-            console.log("res",res);
+            // console.log("res",res);
             var resp = JSON.parse(x);
             if (resp.statusCode == 1) {
                 Materialize.toast(resp.Message, 3000);
@@ -177,14 +177,14 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	// postObj.forgotPwdToken = $stateParams.token;
     	// postObj.newPassword = $scope.reset.password;
 
-    	console.log(postObj);
+    	// console.log(postObj);
 
         // $http.post('http://api.worldtourism.io:8080/tourcoins/resetPassword',postObj).then(success,error);
         $http.post('https://api.bitcoindollar.io/UserAccess.svc/ChangePassword',postObj).then(success,error);
 
         function success(res){
             var x = res.data;
-            console.log("res",res);
+            // console.log("res",res);
             var resp = JSON.parse(x);
             if (resp.statusCode == 1) {
                 Materialize.toast(resp.Message, 3000);
@@ -229,13 +229,13 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 
     $scope.contactUs = function(){
         var postObj = JSON.stringify($scope.contact.userFullName + "|" + $scope.contact.userEmailId + "|" + $scope.contact.userMessage);
-        console.log(postObj);
+        // console.log(postObj);
         // $http.post('http://api.worldtourism.io:8080/tourcoins/contactUs',postObj).then(success,error);
         $http.post('https://api.bitcoindollar.io/UserAccess.svc/ContactUs',postObj).then(success,error);
 
         function success(res){
             var x = res.data;
-            console.log("res",res);
+            // console.log("res",res);
             var resp = JSON.parse(x);
             if (resp.statusCode == 1) {
                 Materialize.toast('Your Message has been successfully sent!', 3000);

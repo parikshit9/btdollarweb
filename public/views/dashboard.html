@@ -102,6 +102,85 @@
 				</div>
 				<div class="col s1">&nbsp;</div>
 			</div>
+
+			<div class="row btd-signin-bg topgap10">
+				<div class="col s1">&nbsp;</div>
+				<div class="col s10 referral-text">
+					<span class="inline-block">
+						MY REFERRAL LINK:
+					</span>
+					<span class="inline-block leftgap12">
+						{{referralLink}}
+					</span>
+					<input type="text" id="referLink" ng-model="referralLink" style="display: inline-block;width: 1px;height: 1px;position: absolute;z-index: -1;">
+					<span id="copy-referral" ng-click="copyRefer()">
+						COPY REFERRAL CODE
+					</span>
+				</div>
+				<div class="col s1">&nbsp;</div>
+			</div>
+
+			<div class="row btd-signin-bg topgap10" style="margin-bottom: 0;">
+				<div class="col s1">&nbsp;</div>
+				<div class="col s10 referral-text">
+					<span class="{{referTab == 'reward'?'refer-tab-active':'refer-tab'}}" ng-click="referTabChanger('reward')">REFERRAL REWARDS</span>
+					<span class="{{referTab == 'list'?'refer-tab-active':'refer-tab'}} leftgap40" ng-click="referTabChanger('list')">MY REFERALLS</span>
+				</div>
+				<div class="col s1">&nbsp;</div>
+			</div>
+
+			<div class="row btd-signin-bg" style="padding: 40px 0;border-top: none;" ng-if="referTab == 'reward'">
+				<div class="col s12 dash-row-2">
+					<div class="row" style="margin-bottom: 0;">
+						<div class="col s3">LEVEL 1</div>
+						<div class="col s4">10% Referral Bonus</div>
+						<div class="col s5 text-right">
+							<img src="/img/user.svg">
+						</div>
+					</div>
+				</div>
+				<div class="col s12 dash-row-1">
+					<div class="row" style="margin-bottom: 0;">
+						<div class="col s3">LEVEL 2</div>
+						<div class="col s4">0.5% Referral Bonus</div>
+						<div class="col s5 text-right">
+							<img src="/img/user.svg">
+							<img src="/img/user.svg" class="leftgap12">
+						</div>
+					</div>
+				</div>
+				<div class="col s12 dash-row-2">
+					<div class="row" style="margin-bottom: 0;">
+						<div class="col s3">LEVEL 3</div>
+						<div class="col s4">2.5% Referral Bonus</div>
+						<div class="col s5 text-right">
+							<img src="/img/user.svg">
+							<img src="/img/user.svg" class="leftgap12">
+							<img src="/img/user.svg" class="leftgap12">
+						</div>
+					</div>
+				</div>
+				<div class="col s12 dash-row-1">
+					<div class="row" style="margin-bottom: 0;">
+						<div class="col s3">LEVEL 4</div>
+						<div class="col s4">2.5% Referral Bonus</div>
+						<div class="col s5 text-right">
+							<img src="/img/user.svg">
+							<img src="/img/user.svg" class="leftgap12">
+							<img src="/img/user.svg" class="leftgap12">
+							<img src="/img/user.svg" class="leftgap12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row btd-signin-bg" style="padding: 40px 0;border-top: none;" ng-if="referTab == 'list'">
+				<div class="col s12" ng-repeat="data in ReferralList.mails" ng-class-odd="'dash-row-2'" ng-class-even="'dash-row-1'">
+					<div class="row" style="margin-bottom: 0;">
+						<div class="col s12">{{data.UserName}}</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="row topgap25">
 				<div class="col s12 text-center">
 					<a href="https://www.facebook.com/Bitcoin-Dollar-1533800040002394" target="_blank">
