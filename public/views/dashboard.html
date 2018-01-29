@@ -62,18 +62,12 @@
 					</div>
 					<div style="margin-top: 90px;">
 						<div class="font-16 font-weight-600 font-white text-center" style="letter-spacing: 0.3px;">CONTRIBUTION OPTIONS</div>
-						<div class="row topgap25 hide-on-small-only">
-							<div class="col s6 contri-btn" style="width: 48%;margin-right: 24px;">
+						<div class="row topgap25">
+							<!-- <div class="col s6 contri-btn" style="width: 48%;margin-right: 24px;">
 								<img src="/img/contribution/btc.svg" style="vertical-align: bottom;">
 								<span class="inline-block leftgap12">BITCOIN</span>
-							</div>
-							<div class="col s6 contri-btn" style="width: 48%;">
-								<img src="/img/contribution/ether.svg" style="vertical-align: bottom;">
-								<span class="inline-block leftgap12">ETHEREUM</span>
-							</div>
-						</div>
-						<div class="row topgap20">
-							<div class="col s12 text-center no-padding">
+							</div> -->
+							<div class="col s6 text-center no-padding" style="width: 48%;">
 								<!-- <img src="/img/contribution/coinpayments.svg" style="vertical-align: middle;margin-top: -6px;">
 								<span class="inline-block leftgap12">ALTCOINS VIA COINPAYMENTS</span> -->
 								<form action="https://www.coinpayments.net/index.php" method="post">
@@ -90,7 +84,53 @@
 									<input type="hidden" name="cancel_url" value="http://bitcoindollar.io/#!/failure">
 									<input type="hidden" name="allow_extra" value="0">
 									<input type="hidden" name="email" value="{{userData.UserEMail}}">
-									<input type="image" src="/img/coinpayments-btn.png" alt="Buy Now with CoinPayments.net" width="100%">
+									<input type="image" src="/img/btns/Bitcoin.png" alt="Buy Now with CoinPayments.net" width="100%">
+								</form>
+							</div>
+							<!-- <div class="col s6 contri-btn" style="width: 48%;">
+								<img src="/img/contribution/ether.svg" style="vertical-align: bottom;">
+								<span class="inline-block leftgap12">ETHEREUM</span>
+							</div> -->
+							<div class="col s6 text-center no-padding" style="width: 48%;float: right;">
+								<!-- <img src="/img/contribution/coinpayments.svg" style="vertical-align: middle;margin-top: -6px;">
+								<span class="inline-block leftgap12">ALTCOINS VIA COINPAYMENTS</span> -->
+								<form action="https://www.coinpayments.net/index.php" method="post">
+									<input type="hidden" name="cmd" value="_pay">
+									<input type="hidden" name="reset" value="1">
+									<input type="hidden" name="merchant" value="48f385d2ce40ef9b9a55a39fa8474bdd">
+									<input type="hidden" name="item_name" value="Bitcoin Dollar">
+									<input type="hidden" name="currency" value="USD">
+									<input type="hidden" name="amountf" value="2.00000000">
+									<input type="hidden" name="quantity" value="1">
+									<input type="hidden" name="allow_quantity" value="1">
+									<input type="hidden" name="want_shipping" value="0">
+									<input type="hidden" name="success_url" value="http://bitcoindollar.io/#!/success">
+									<input type="hidden" name="cancel_url" value="http://bitcoindollar.io/#!/failure">
+									<input type="hidden" name="allow_extra" value="0">
+									<input type="hidden" name="email" value="{{userData.UserEMail}}">
+									<input type="image" src="/img/btns/Ethereum.png" alt="Buy Now with CoinPayments.net" width="100%">
+								</form>
+							</div>
+						</div>
+						<div class="row topgap20">
+							<div class="col s6 text-center no-padding" style="width: 48%;margin-left: 50%;transform: translateX(-50%);">
+								<!-- <img src="/img/contribution/coinpayments.svg" style="vertical-align: middle;margin-top: -6px;">
+								<span class="inline-block leftgap12">ALTCOINS VIA COINPAYMENTS</span> -->
+								<form action="https://www.coinpayments.net/index.php" method="post">
+									<input type="hidden" name="cmd" value="_pay">
+									<input type="hidden" name="reset" value="1">
+									<input type="hidden" name="merchant" value="48f385d2ce40ef9b9a55a39fa8474bdd">
+									<input type="hidden" name="item_name" value="Bitcoin Dollar">
+									<input type="hidden" name="currency" value="USD">
+									<input type="hidden" name="amountf" value="2.00000000">
+									<input type="hidden" name="quantity" value="1">
+									<input type="hidden" name="allow_quantity" value="1">
+									<input type="hidden" name="want_shipping" value="0">
+									<input type="hidden" name="success_url" value="http://bitcoindollar.io/#!/success">
+									<input type="hidden" name="cancel_url" value="http://bitcoindollar.io/#!/failure">
+									<input type="hidden" name="allow_extra" value="0">
+									<input type="hidden" name="email" value="{{userData.UserEMail}}">
+									<input type="image" src="/img/btns/Altcoins.png" alt="Buy Now with CoinPayments.net" width="100%">
 								</form>
 							</div>
 							<!-- <div class="col s6 contri-btn" style="width: 48%;">
@@ -142,7 +182,7 @@
 				<div class="col s12 dash-row-1">
 					<div class="row" style="margin-bottom: 0;">
 						<div class="col s3">LEVEL 2</div>
-						<div class="col s4">0.5% Referral Bonus</div>
+						<div class="col s4">05% Referral Bonus</div>
 						<div class="col s5 text-right">
 							<img src="/img/user.svg">
 							<img src="/img/user.svg" class="leftgap12">
@@ -189,7 +229,7 @@
 					<a href="https://twitter.com/bitcoin_dollar" target="_blank">
 						<img src="/img/dash-social/Twitter.svg">
 					</a>
-					<a href="https://github.com/BTCGPU/BTCGPU/search?utf8=%E2%9C%93&q=bitcoin+open+source&type=" target="_blank">
+					<a href="https://github.com/bitcoindollar" target="_blank">
 						<img src="/img/dash-social/Github.svg">
 					</a>
 					<a href="https://www.reddit.com/user/Bitcoindollar" target="_blank">
