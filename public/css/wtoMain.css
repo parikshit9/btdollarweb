@@ -33,10 +33,10 @@
     font-weight: 100;
     src: url("/fonts/Titillium-Thin.otf") format("opentype");
 }
-/*@font-face {
+@font-face {
     font-family: BebasNeue;
     src: url("/fonts/BebasNeue.otf") format("opentype");
-}*/
+}
 
 html,body {
 	font-family: Titillium!important;
@@ -350,19 +350,19 @@ html,body {
 .number-million{
 	font-family: BebasNeue!important;
 	font-size: 48px;
-	font-weight: 500;
+	font-weight: bold;
 	text-align: left;
-	color: #ffffff;
+	color: #ffa001;
 	display: inline-block;
 }
 .million-text{
 	display: inline-block;
-	font-family: BebasNeue!important;
+	/*font-family: BebasNeue!important;*/
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: normal;
 	line-height: 0.95;
 	text-align: left;
-	color: #ffffff;
+	color: #2e3c56;
 }
 .wto-dhms{
 	font-size: 10px;

@@ -532,6 +532,34 @@ input[type=number]::-webkit-outer-spin-button {
 #copy-referral:hover{
 	color: #ffa001;
 }
+.dollar-meet{
+	font-size: 25px;
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.68;
+	letter-spacing: 2.8px;
+	text-align: left;
+	color: #ffa001;
+	display: inline-block;
+	vertical-align: top;
+    margin-top: 24px;
+    margin-right: 30px;
+}
+.wt-liberty{
+	width: 100%;
+	height: auto;
+}
+.logo-name-container{
+	margin-top: 35px;
+}
+.wto-stats-container{
+	margin-top: 40px;
+}
+.copy-right{
+	text-align: right;
+	margin-top: 20px;
+}
 /*(for small screen size less then 480px)*/
 @media only screen and (max-width: 480px){
 	.feature-icon-block{
@@ -556,6 +584,9 @@ input[type=number]::-webkit-outer-spin-button {
 	}
 	.min-xs-height{
 		height: 50px;
+	}
+	.copy-right{
+		text-align: left;
 	}
 }
 
