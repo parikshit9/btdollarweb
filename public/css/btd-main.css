@@ -560,6 +560,16 @@ input[type=number]::-webkit-outer-spin-button {
 	text-align: right;
 	margin-top: 20px;
 }
+.dl-yl-container{
+	background-color: #ffa001;
+	padding: 17px 25px;
+	color: #fff;
+}
+.dl-tp-container{
+	border:1px solid #ffa001;
+	color: #ffa001;
+	padding: 17px 25px;
+}
 /*(for small screen size less then 480px)*/
 @media only screen and (max-width: 480px){
 	.feature-icon-block{
