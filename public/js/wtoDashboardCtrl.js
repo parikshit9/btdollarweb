@@ -122,4 +122,62 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 
 	// Decode the String
 	// var decodedString = Base64.decode(encodedString);
+
+	function fetchWalletId(){
+		var url = "https://api.bitcoindollar.io/UserAccess.svc/GetWalletId";
+		// console.log($scope.userData);
+		var s = String($scope.userData.UserID);
+		var postObj = "" + s;
+		// var postObj = "17";
+		// console.log(postObj)
+		$http.post(url,postObj).then(success,error);
+
+		function success(res){
+			// console.log(res);
+			$scope.userWalletId = JSON.parse(res.data).Message;
+			if ($scope.userWalletId.length>0) {
+				$scope.btcFlag = true;
+			}else{
+				$scope.btcFlag = false;
+			}
+			// console.log($scope.ReferralList);
+		}
+
+		function error(err){
+			console.log(err);
+		}
+	}
+	fetchWalletId();
+	$scope.editMode = false;
+	$scope.addWalletId = function(walletId){
+		if ($scope.editMode) {
+			var url = "https://api.bitcoindollar.io/UserAccess.svc/EditWalletId";
+		}else{
+			var url = "https://api.bitcoindollar.io/UserAccess.svc/InsertWalletId";
+		}
+		// console.log($scope.userData);
+		var s = String($scope.userData.UserID + "|" + walletId);
+		var postObj = "" + s;
+		// var postObj = "17";
+		// console.log(postObj)
+		$http.post(url,postObj).then(success,error);
+
+		function success(res){
+			// console.log(res);
+			$scope.editMode = false;
+			Materialize.toast("Wallet Id save successfuly", 3000);
+			fetchWalletId();
+			// $scope.userWalletId = JSON.parse(res.data);
+			// console.log($scope.ReferralList);
+		}
+
+		function error(err){
+			console.log(err);
+		}
+	}
+
+	$scope.showEdit = function(){
+		$scope.editMode = true;
+		$scope.btcFlag = false;
+	}
 });

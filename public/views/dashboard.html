@@ -297,6 +297,16 @@
 					</div>
 				</div>
 			</div>
+			<div class="row topgap20">
+				<div class="col m6 s12 font-white font-16 font-weight-600">
+					<span class="inline-block topgap6">To recieve BTD token, update your etherium address</span>
+				</div>
+				<div class="col m6 s12 relative">
+					<input type="text" name="wallet" class="wallet-input" ng-model="userWalletId"  ng-disabled="btcFlag">
+					<span class="send-wallet-btn" ng-click="addWalletId(userWalletId)" style="top: 8px;right: 5%;" ng-if="!btcFlag">SAVE</span>
+					<span class="send-wallet-btn" ng-click="showEdit()" style="top: 8px;right: 5%;" ng-if="btcFlag">EDIT</span>
+				</div>
+			</div>
 		</div>
 
 		<div class="col s4 m1 hide-on-small-only">&nbsp;</div>
