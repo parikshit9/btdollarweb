@@ -85,7 +85,7 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 	}
 	fetchReferralList();
 
-	$scope.tab = "crowd";
+	$scope.tab = "dash";
 	$scope.tabChanger = function(name){
 		$scope.tab = name;
 	}
